@@ -1,7 +1,7 @@
 AvatarCore
 ==========
 
-[[https://github.com/senocular/avatarcore/blob/master/logo.png|alt=avatarcore logo]]
+![avatarcore logo](https://github.com/senocular/avatarcore/blob/master/logo.png)
 
 Originally hosted on google code, this library was a flash/xml-based avatar creation library created as a replacement library for the mii editor (ultimately squashed by nintendo).  It never made it to a complete release and work on it has since been stopped.
 
