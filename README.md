@@ -18,7 +18,7 @@ Where to go from here
 * Introduction - learn more about what the framework does and how it works
 * Demos - see the framework in action
 * GettingStarted - download and learn how to use the framework for your projects
-*[API Documentation](http://www.myavatareditor.com/avatarcore/docs/) - visit the API reference for the framework
+* [API Documentation](http://www.myavatareditor.com/avatarcore/docs/) - visit the API reference for the framework
 
 Avatar Core is an offshoot from [My Avatar Editor](http://www.myavatareditor.com/). The primary goal of the Avatar Core framework is to provide an alternate platform to My Avatar Editor for developers interested in developing custom avatar editor solutions.
 
