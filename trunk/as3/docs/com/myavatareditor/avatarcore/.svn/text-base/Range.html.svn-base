@@ -1,0 +1,177 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../override.css" type="text/css"><meta name="keywords" content="Range,com.myavatareditor.avatarcore.Range,CURRENT_VERSION,LIBRARY_CHANGED,REBUILD,X_AXIS,Y_AXIS,a,aM,adjust,adjustName,adjustSet,art,artName,artSet,artStyle,autoRedraw,avatar,axis,b,bM,baseAdjust,behaviors,collection,collection,color,colorName,colorSet,colorize,colorize,defaultAdjust,defaultArt,defaultColor,defaultName,defaultStyleName,definition,flipX,flipY,g,gM,itemCount,itemCount,library,library,libraryName,max,meta,meta,min,name,name,name,name,name,name,name,name,name,nameKey,parent,parentCount,parentName,parentName,r,rM,requireUniqueNames,rotation,rotation,scale,scale,scaleX,scaleX,scaleY,scaleY,smoothing,smoothing,span,src,stepSpan,steps,style,suppressDraw,suppressEvents,suppressEvents,thumbnail,thumbnail,x,x,x,y,y,y,zIndex,zIndex,add,addItem,addItem,addItem,addItem,addItem,addItem,addItem,applyArtSpriteBehavior,applyArtSpriteParentTransform,assignDefaults,clamp,clearCollection,clearCollection,clone,clone,clone,clone,clone,clone,clone,clone,clone,clone,clone,clone,clone,clone,clone,clone,clone,collectionItemExists,collectionItemExists,consolidate,consolidateFeatures,copyCollectionFrom,copyCollectionFrom,copyValue,dispatchEvent,dispatchEvent,drawArtSprite,drawArtSprite,drawArtSprite,drawArtSprite,getArtSprites,getArtSprites,getArtSprites,getArtSprites,getConcatenatedParentMatrix,getDefaultPropertiesInXML,getDefaultPropertiesInXML,getDefaultPropertiesInXML,getDefaultPropertiesInXML,getDefaultPropertiesInXML,getDefaultPropertiesInXML,getItemByName,getItemByName,getItemsByType,getItemsByType,getMatrix,getObjectAsXML,getObjectAsXML,getObjectAsXML,getObjectAsXML,getObjectAsXML,getPropertiesAsAttributesInXML,getPropertiesAsAttributesInXML,getPropertiesAsAttributesInXML,getPropertiesAsAttributesInXML,getPropertiesAsAttributesInXML,getPropertiesAsAttributesInXML,getPropertiesAsAttributesInXML,getPropertiesAsAttributesInXML,getPropertiesIgnoredByXML,getPropertiesIgnoredByXML,getPropertiesIgnoredByXML,getPropertiesIgnoredByXML,getPropertiesIgnoredByXML,getPropertiesIgnoredByXML,getPropertiesIgnoredByXML,getPropertiesIgnoredByXML,getRenderedAdjust,getRenderedArt,getRenderedArtStyle,getRenderedBehaviors,getRenderedColor,load,normalize,parse,percentAt,rebuild,redraw,redraw,redraw,redraw,removeItem,removeItem,removeItem,removeItem,removeItemByName,removeItemByName,setArtSpriteColor,setArtSpriteMatrix,stepIndex,stepValue,subtract,toString,toString,toString,toString,toString,toString,updateParentHierarchy,valueAt,valueAtStepIndex"><title>com.myavatareditor.avatarcore.Range</title></head><body><script language="javascript" type="text/javascript" src="../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'Range - Avatar Core API Documentation';
+				var baseRef = '../../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">Avatar Core API Documentation</td><td class="titleTableTopNav" align="right"><a href="../../../package-summary.html" onclick="loadClassListFrame('../../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../../class-summary.html" onclick="loadClassListFrame('../../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../../all-index-A.html" onclick="loadClassListFrame('../../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../../index.html?com/myavatareditor/avatarcore/Range.html&amp;com/myavatareditor/avatarcore/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../../images/logo.jpg" class="logoImage" alt=" Adobe Logo " title=" Adobe Logo "></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">Range</td><td class="titleTableSubNav" id="subNav" align="right"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Range"); titleBar_setSubNav(false,true,false	,false,false,false,true,false,false	,false,false,false,false,false);}	
+				-->
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">com.myavatareditor.avatarcore</a></td></tr><tr><td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  Range</td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">Range  <img src="../../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> Object</td></tr><tr><td class="classHeaderTableLabel">Implements</td><td> <a href="../../../com/myavatareditor/avatarcore/xml/IXMLWritable.html">IXMLWritable</a></td></tr></table><p></p><p></p><p></p>
+	 Defines a numeric rannge by which a number
+	 can be constrained between a min and max value.
+	 <p></p><br/><hr></div><a name="propertySummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Properties</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#max" class="signatureLink">max</a> : Number<div class="summaryTableDescription">
+		 Maximum value in the range.</div></td><td class="summaryTableOwnerCol">Range</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#min" class="signatureLink">min</a> : Number<div class="summaryTableDescription">
+		 Minimum value in the range.</div></td><td class="summaryTableOwnerCol">Range</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#name" class="signatureLink">name</a> : String<div class="summaryTableDescription">
+		 The name of the Range instance.</div></td><td class="summaryTableOwnerCol">Range</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#span" class="signatureLink">span</a> : Number<div class="summaryTableDescription">[read-only] 
+		 The difference between min and max
+		 </div></td><td class="summaryTableOwnerCol">Range</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#steps" class="signatureLink">steps</a> : int<div class="summaryTableDescription">
+		 Number of steps allowable between the min and max
+		 values of the range.</div></td><td class="summaryTableOwnerCol">Range</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#stepSpan" class="signatureLink">stepSpan</a> : Number<div class="summaryTableDescription">[read-only] 
+		 The span for each step given the set number of steps.</div></td><td class="summaryTableOwnerCol">Range</td></tr></table></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#Range()" class="signatureLink">Range</a>(min:Number = 0, max:Number = 0, steps:int = 0)</div><div class="summaryTableDescription">
+		 Constructor for creating new Range instances.</div></td><td class="summaryTableOwnerCol">Range</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#clamp()" class="signatureLink">clamp</a>(value:Number):Number</div><div class="summaryTableDescription">
+		 Returns the passed value clamped within
+		 the range of the Range min and max values.</div></td><td class="summaryTableOwnerCol">Range</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#clone()" class="signatureLink">clone</a>(copyInto:Object = null):Object</div><div class="summaryTableDescription">
+		 Creates and returns a copy of the Range object.</div></td><td class="summaryTableOwnerCol">Range</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getDefaultPropertiesInXML()" class="signatureLink">getDefaultPropertiesInXML</a>():Object</div><div class="summaryTableDescription">
+		 
+		 Specifies the default values of properties within an object.</div></td><td class="summaryTableOwnerCol">Range</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getObjectAsXML()" class="signatureLink">getObjectAsXML</a>():XML</div><div class="summaryTableDescription">
+		 
+		 Provides an XML representation of an object being written to XML.</div></td><td class="summaryTableOwnerCol">Range</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getPropertiesAsAttributesInXML()" class="signatureLink">getPropertiesAsAttributesInXML</a>():Object</div><div class="summaryTableDescription">
+		 
+		 Specifies which object properties are defined as attributes
+		 in XML.</div></td><td class="summaryTableOwnerCol">Range</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getPropertiesIgnoredByXML()" class="signatureLink">getPropertiesIgnoredByXML</a>():Object</div><div class="summaryTableDescription">
+		 
+		 Specifies which object properties are omitted from XML.</div></td><td class="summaryTableOwnerCol">Range</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#normalize()" class="signatureLink">normalize</a>():void</div><div class="summaryTableDescription">
+		 In the case where min is greater than max,
+		 normalize will reverse those values to ensure
+		 min is, in fact, smaller.</div></td><td class="summaryTableOwnerCol">Range</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#percentAt()" class="signatureLink">percentAt</a>(value:Number):Number</div><div class="summaryTableDescription">
+		 Returns the percent within the range that the
+		 passed value exists within the range.</div></td><td class="summaryTableOwnerCol">Range</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#stepIndex()" class="signatureLink">stepIndex</a>(value:Number):int</div><div class="summaryTableDescription">
+		 Provides the step index, or the number of steps from min using
+		 stepSpen to reach the step value of the value provided.</div></td><td class="summaryTableOwnerCol">Range</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#stepValue()" class="signatureLink">stepValue</a>(value:Number):Number</div><div class="summaryTableDescription">
+		 Returns the stepped value of the range, or the value
+		 closest to the division with the range divided steps
+		 times.</div></td><td class="summaryTableOwnerCol">Range</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#toString()" class="signatureLink">toString</a>():String</div><div class="summaryTableDescription">
+		 </div></td><td class="summaryTableOwnerCol">Range</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#valueAt()" class="signatureLink">valueAt</a>(percent:Number):Number</div><div class="summaryTableDescription">
+		 Returns the value within the range at the
+		 passed percent within the range.</div></td><td class="summaryTableOwnerCol">Range</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#valueAtStepIndex()" class="signatureLink">valueAtStepIndex</a>(index:int):Number</div><div class="summaryTableDescription">
+		 Returns the value within the range at the
+		 step index provided.</div></td><td class="summaryTableOwnerCol">Range</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+										showHideInherited();
+										--></script><div class="MainContent"><div class="detailSectionHeader">Property Detail</div><a name="propertyDetail"></a><a name="max"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">max</td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>max:Number</code>&nbsp;&nbsp;[read-write] <p></p><p></p><p>
+		 Maximum value in the range.
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get max():Number</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set max(value:Number):void</code><br/></div><a name="propertyDetail"></a><a name="min"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">min</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>min:Number</code>&nbsp;&nbsp;[read-write] <p></p><p></p><p>
+		 Minimum value in the range.
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get min():Number</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set min(value:Number):void</code><br/></div><a name="propertyDetail"></a><a name="name"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">name</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>name:String</code>&nbsp;&nbsp;[read-write] <p></p><p></p><p>
+		 The name of the Range instance.
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get name():String</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set name(value:String):void</code><br/></div><a name="propertyDetail"></a><a name="span"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">span</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>span:Number</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 The difference between min and max
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get span():Number</code><br/></div><a name="propertyDetail"></a><a name="steps"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">steps</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>steps:int</code>&nbsp;&nbsp;[read-write] <p></p><p></p><p>
+		 Number of steps allowable between the min and max
+		 values of the range. Steps are calculated only when 
+		 getting a range value through stepValue(). When less 
+		 than 1, the range is considered to have no steps.  When
+		 equal to 1, the range as a whole is considered to be 
+		 representative of one step and stepValue() will not
+		 restrict inputs to the range.  When more than 1, calling
+		 stepValue() will restrict within the range boundaries
+		 and restict to the values of that range as divided evenly
+		 by the specified number of steps.
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get steps():int</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set steps(value:int):void</code><br/></div><a name="propertyDetail"></a><a name="stepSpan"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">stepSpan</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>stepSpan:Number</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 The span for each step given the set number of steps.
+		 If steps is not set, or is less than 1, 0 is returned.
+		 If steps is 1, stepSpan will equal span.
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get stepSpan():Number</code><br/></div><a name="constructorDetail"></a><div class="detailSectionHeader">Constructor Detail</div><a name="Range()"></a><a name="Range(Number,Number,int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">Range</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td></tr></table><div class="detailBody"><code>public function Range(min:Number = 0, max:Number = 0, steps:int = 0)</code><p></p><p>
+		 Constructor for creating new Range instances.
+		 </p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">min</span>:Number</code> (default = <code>0</code>)<code></code></td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">max</span>:Number</code> (default = <code>0</code>)<code></code></td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">steps</span>:int</code> (default = <code>0</code>)<code></code></td></tr></table></div><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="clamp()"></a><a name="clamp(Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">clamp</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function clamp(value:Number):Number</code><p></p><p></p><p>
+		 Returns the passed value clamped within
+		 the range of the Range min and max values.
+		 If the value passed is greater than max, 
+		 max is returned. If the value is less than
+		 min, min is returned.  If the value is between
+		 min and max, the original value is returned.
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:Number</code></td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Number</code></td></tr></table></div><a name="clone()"></a><a name="clone(Object)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">clone</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function clone(copyInto:Object = null):Object</code><p></p><p></p><p>
+		 Creates and returns a copy of the Range object.
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">copyInto</span>:Object</code> (default = <code>null</code>)<code></code></td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Object</code> &mdash; A copy of this Range object.
+		 </td></tr></table></div><a name="getDefaultPropertiesInXML()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getDefaultPropertiesInXML</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getDefaultPropertiesInXML():Object</code><p></p><p></p><p>
+		 
+		 Specifies the default values of properties within an object.
+		 When an object is being written to XML, if it's property
+		 values match the default values defined by this call for that
+		 property, that property will not be written to XML.  This 
+		 reduces unnecessary XML elements and attributes which would
+		 otherwise do nothing but specify a value which already exists
+		 by default.
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Object</code> &mdash; An object with name value pairs where the names
+		 are the names of the class members and the values are the
+		 default values of those members.
+		 </td></tr></table></div><a name="getObjectAsXML()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getObjectAsXML</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getObjectAsXML():XML</code><p></p><p></p><p>
+		 
+		 Provides an XML representation of an object being written to XML.  
+		 If the return value is null, the XML for the class instance
+		 is created automatically by the XMLDefinitionWriter class.
+		 At that point getPropertiesIgnoredByXML and
+		 getPropertiesAsAttributesInXML are used to drive that
+		 process.
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>XML</code> &mdash; An XML version of the class as it should be
+		 represented within XML produced by XMLDefinitionWriter, or
+		 null if XMLDefinitionWriter should write the XML itself.
+		 </td></tr></table></div><a name="getPropertiesAsAttributesInXML()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getPropertiesAsAttributesInXML</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getPropertiesAsAttributesInXML():Object</code><p></p><p></p><p>
+		 
+		 Specifies which object properties are defined as attributes
+		 in XML. If getObjectAsXML returns null, this method is used
+		 by XMLDefinitionWriter to get the class members of the
+		 object that are created as attributes.  By default, class
+		 members are written as child elements.  Members specified
+		 as attributes should contain primitive values such as
+		 numbers, strings, or booleans. The object returned
+		 by this method should contain the names (keys) of each
+		 member not to be written.  Their values can be anything
+		 but the value of 1 is typical.
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Object</code> &mdash; An object with name value pairs where the names
+		 are the names of the class members to be written as
+		 attributes.  For example {foo:1, bar:1} means that the foo
+		 and bar values of the respective instance will be written
+		 as attributes in the generated XML.
+		 </td></tr></table></div><a name="getPropertiesIgnoredByXML()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getPropertiesIgnoredByXML</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getPropertiesIgnoredByXML():Object</code><p></p><p></p><p>
+		 
+		 Specifies which object properties are omitted from XML.
+		 If getObjectAsXML returns null, this method is used by
+		 XMLDefinitionWriter to get the class members of the
+		 object that are not written to XML. The object returned
+		 by this method should contain the names (keys) of each
+		 member not to be written.  Their values can be anything
+		 but the value of 1 is typical.
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Object</code> &mdash; An object with name value pairs where the names
+		 are the names of the class members not to be written to
+		 XML. For example {foo:1, bar:1} means that the foo and bar
+		 values of the respective instance will not be written to
+		 XML.
+		 </td></tr></table></div><a name="normalize()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">normalize</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function normalize():void</code><p></p><p></p><p>
+		 In the case where min is greater than max,
+		 normalize will reverse those values to ensure
+		 min is, in fact, smaller.
+		 </p></div><a name="percentAt()"></a><a name="percentAt(Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">percentAt</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function percentAt(value:Number):Number</code><p></p><p></p><p>
+		 Returns the percent within the range that the
+		 passed value exists within the range.
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:Number</code></td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Number</code></td></tr></table></div><a name="stepIndex()"></a><a name="stepIndex(Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">stepIndex</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function stepIndex(value:Number):int</code><p></p><p></p><p>
+		 Provides the step index, or the number of steps from min using
+		 stepSpen to reach the step value of the value provided.
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:Number</code> &mdash; A value within the range to 
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>int</code> &mdash; The step index for the value passed. If a step index
+		 does not apply, -1 is returned.
+		 </td></tr></table></div><a name="stepValue()"></a><a name="stepValue(Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">stepValue</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function stepValue(value:Number):Number</code><p></p><p></p><p>
+		 Returns the stepped value of the range, or the value
+		 closest to the division with the range divided steps
+		 times.  This method will use the steps property of the
+		 current Range instance to determine the step value.  If
+		 that value has not been set or is less than 1, no stepping
+		 occurs.  When 1, the range represents one step and values
+		 are not restricted to the range. When steps is greater than
+		 1, stepValue automatically clamps the value to the range
+		 and the values of the range as divided evenly
+		 by the specified number of steps.
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">value</span>:Number</code> &mdash; The value to convert into a stepped value.
+		 </td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Number</code> &mdash; A stepped value of the range.
+		 </td></tr></table></div><a name="toString()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">toString</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function toString():String</code><p></p><p></p><p>
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code></td></tr></table></div><a name="valueAt()"></a><a name="valueAt(Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">valueAt</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function valueAt(percent:Number):Number</code><p></p><p></p><p>
+		 Returns the value within the range at the
+		 passed percent within the range.
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">percent</span>:Number</code></td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Number</code></td></tr></table></div><a name="valueAtStepIndex()"></a><a name="valueAtStepIndex(int)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">valueAtStepIndex</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function valueAtStepIndex(index:int):Number</code><p></p><p></p><p>
+		 Returns the value within the range at the
+		 step index provided.  If there are no steps
+		 in the range, min is returned.
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">index</span>:int</code></td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Number</code></td></tr></table></div><br/><br/><hr><br/><p></p><center class="copyright"><footer></footer><br/>Sun Feb 7 2010, 10:25 PM -08:00  </center></div></body></html><!--<br/>Sun Feb 7 2010, 10:25 PM -08:00  -->

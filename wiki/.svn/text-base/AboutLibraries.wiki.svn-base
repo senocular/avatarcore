@@ -1,0 +1,135 @@
+#summary Learn more about using Libraries in Avatar Core.
+#labels Phase-Implementation
+_(Last updated for ver 0.5.5)_
+
+Libraries define the available Feature variations for an Avatar.  They can define which Features can be added as well as what art, adjustments, colors, or behaviors that Feature uses.
+
+API: [http://www.myavatareditor.com/avatarcore/docs/index.html?com/myavatareditor/avatarcore/Library.html&com/myavatareditor/avatarcore/class-list.html Library Class], [http://www.myavatareditor.com/avatarcore/docs/index.html?com/myavatareditor/avatarcore/FeatureDefinition.html&com/myavatareditor/avatarcore/class-list.html FeatureDefinition Class]
+
+*In This Document:*
+<wiki:toc />
+
+
+== Library Containers ==
+
+Library objects are collections that store other objects and behave much like Avatar.  Where Avatars store Feature objects, Libraries store FeatureDefinition objects.  Each FeatureDefinition relates to a Feature, specifying for that Feature possible variations of Art and other characteristics.
+
+<img src="http://www.myavatareditor.com/avatarcore/images/uml_library_avatarart.jpg" alt="Library Class Diagram" />
+
+FeatureDefinition objects contain collections for objects used by Features such as Art, Adjusts, Colors, and behavior objects.  Art variations, for example, are kept in the FeatureDefinition.artSet collection, and Colors in the FeatureDefinition.colorSet collection.
+
+{{{
+<Library>
+	<FeatureDefinition name="mouth">
+		<artSet>
+			<Art name="smile" src="smile_mouth.png" />
+			<Art name="open" src="open_mouth.png" />
+		</artSet>
+	</FeatureDefinition>
+	<FeatureDefinition name="eyes">
+		<artSet>
+			<Art name="oval" src="oval_eyes.png" />
+			<Art name="star" src="star_eyes.png" />
+		</artSet>
+		<colorSet>
+			<Color name="green" color="#00FF00" />
+			<Color name="blue" color="#0000FF" />
+		</colorSet>
+		<behaviors>
+			<Mirror />
+		</behaviors>
+	</FeatureDefinition>
+</Library>
+}}}
+
+Behaviors in FeatureDefinitions are unique in that they do not represent a collection of available behaviors for selection.  All behaviors in a FeatureDefinition are used to render all variations of the Feature. 
+
+
+== Linking to Libraries ==
+
+To use a Library, set Avatar.library to the desired Library object.  An Avatar can only reference one Library at a time, though multiple Avatars can reference the same Library. 
+
+{{{
+var avatar:Avatar = new Avatar();
+var library:Library = new Library();
+avatar.library = library;
+}}} 
+
+When the library is set, connections between Features within the Avatar and FeatureDefinitions within the Library are automatically made. This is done through the name property of both the Feature and FeatureDefinition; Features find and reference FeatureDefinitions in an associated Library that have the same name as themselves.
+
+
+{{{
+var feature = new Feature();
+feature.name = "foo";
+avatar.addItem(feature);
+
+var featureDefinition = new FeatureDefinition();
+featureDefinition.name = "foo";
+library.addItem(featureDefinition);
+
+trace(feature.definition == featureDefinition); // true
+}}} 
+
+Names are also used to match Art, Adjusts, and Colors.  A Feature will render itself with the Art defined in a FeatureDefinition if its Art reference has the same name as one found there.  If not, the Feature can render its own.  This creates a hierarchical precedence with rendering where linked FeatureDefinitions have a higher precedence being used in place of individual definitions within a Feature.  
+
+{{{
+<Library>
+	<FeatureDefinition name="mouth">
+		<artSet>
+			<Art name="smile" src="smile_mouth.png" />
+			<Art name="open" src="open_mouth.png" />
+		</artSet>
+	</FeatureDefinition>
+</Library>
+<Avatar>
+	<Feature name="mouth">
+		<!-- renders open_mouth.png -->
+		<art name="open" />
+	</Feature>
+</Avatar>
+}}}
+
+Additionally, Feature objects contain name shortcuts for Art and other references through properties like artName. More information on this, and how Features find references in [AboutFeatures].
+
+== Definitions Class ==
+
+The association of Library to Avatar can be handled through code, but can also be handled through XML when using the Definitions object.  Definitions objects are collections designed specifically to simplify the loading and parsing of Avatar Core XML and to automatically make connections between Libraries and Avatars.  A Definitions object will connect an Avatar with a Library through the value of Avatar.libraryName. For example:
+
+{{{
+<!-- example.xml -->
+<Definitions xmlns="com.myavatareditor.avatarcore">
+	<Library name="myLibrary">
+		<FeatureDefinition name="mouth">
+			<artSet>
+				<Art name="smile" src="smile_mouth.png" />
+				<Art name="open" src="open_mouth.png" />
+			</artSet>
+		</FeatureDefinition>
+	</Library>
+	<Avatar name="myAvatar" libraryName="myLibrary">
+		<Feature name="mouth">
+			<art name="open" />
+		</Feature>
+	</Avatar>
+</Definitions>
+}}}
+{{{
+var definitions:Definitions = new Definitions();
+definitions.addEventListener(Event.COMPLETE, loadComplete);
+definitions.load(new URLRequest("example.xml"));
+
+function loadComplete(event:Event):void {
+	var avatar:Avatar = definitions.getItemByName("myAvatar") as Avatar;
+	trace(avatar.library.name); // myLibrary
+}
+}}}
+
+
+== Where to go from here ==
+  * [AboutFeatures]
+  * [AboutArt]
+  * [AboutXMLParsing]
+  * [AboutLibraries]
+  * [AboutColors]
+  * [AboutAdjusts]
+  * [AboutBehaviors]

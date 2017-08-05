@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/96/trunk/as3/src/com/myavatareditor/avatarcore/xml
+END
+IXMLWritable.as
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/96/trunk/as3/src/com/myavatareditor/avatarcore/xml/IXMLWritable.as
+END
+XMLDefinitionWriter.as
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/96/trunk/as3/src/com/myavatareditor/avatarcore/xml/XMLDefinitionWriter.as
+END
+XMLDefinitionParser.as
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/96/trunk/as3/src/com/myavatareditor/avatarcore/xml/XMLDefinitionParser.as
+END

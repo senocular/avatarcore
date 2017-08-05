@@ -1,0 +1,76 @@
+#summary Learn more about using Behaviors in Avatar Core.
+#labels Phase-Implementation
+_(Last updated for ver 0.5.5)_
+
+Behaviors are used to affect how a Feature is drawn.  Their capabilities go beyond the simple transforming and coloring handled by Adjust and Color objects. They perform logic which is executed every time an AvatarDisplay draws a Feature.
+
+API: [http://www.myavatareditor.com/avatarcore/docs/index.html?com/myavatareditor/avatarcore/IBehavior.html&com/myavatareditor/avatarcore/class-list.html Behavior Interface]
+
+*In This Document:*
+<wiki:toc />
+
+
+== Behavior Model ==
+
+Behaviors are objects which extend the IBehavior interface.  It includes 2 methods used by behaviors when they're used with a feature:
+  * getArtSprites - Returns a list of ArtSprites used to draw the Feature
+  * drawArtSprite - Used to draw each ArtSprite defined by getArtSprites
+
+Every time a redraw operation is handled by an AvatarDisplay object, it will run through the standard drawing procedures for each Feature, as well as each behavior assigned to that Feature.
+
+The order of operations followed when drawing a Feature is:
+  # Apply Feature's Adjust
+  # Apply Feature's Color
+  # Run each behavior
+  # Apply inherited adjustments from parent
+
+
+== Core Behaviors ==
+
+Avatar Core ships with 2 built-in behaviors, Mirror and Constrain.  As with all behaviors, they're extensions of the framework and not necessary for core functionality.
+
+=== Mirror Behavior ===
+
+The Mirror behavior is used to mirror a Feature along either the x or y axis.  Mirrored Features have their Art duplicated and rendered within a mirrored position with respect to the original Art.  This behavior is good for symmetrical facial features like eyes and ears.
+
+=== Constrain Behavior ===
+
+The Constrain behavior is used to restrict the Adjust used to draw a Feature.  This is important to make sure editable features aren't edited beyond reasonable bounds.  Constrain can restrict x, y, scaleX, scaleY, (scale,) and rotation.  Each are handled with a Range object which can also be used to apply stepping (reducing the possible number of values between any given range).
+
+
+== Assigning Behaviors ==
+
+Each Feature can support any number of behaviors.  To facilitate this, they're stored in a collection owned by each Feature, Feature.behaviors.
+
+{{{
+<Feature>
+	<behaviors>
+		<Constrain>
+			<x min="0" max="100" />
+			<y min="-50" max="50" />
+		</Constrain>
+		<Mirror />
+	</behaviors>
+</Feature>
+}}}
+
+The order in which they appear in the behaviors list represents the order in which those behaviors are executed when the Feature is drawn.
+
+
+== Custom Behaviors ==
+
+Behaviors are extensions to the core functionality of the Avatar Core framework.  As a result, it can be easy to make custom behaviors.  All you need to do is make a class that implements IBehavior and add an instance of that class to a Feature's behavior list.
+
+When using custom behaviors: 
+  * Make sure the behavior definition is compiled into your client
+  * Make sure you use the correct namespace for the behavior in XML
+
+
+== Where to go from here ==
+  * [AboutFeatures]
+  * [AboutArt]
+  * [AboutXMLParsing]
+  * [AboutLibraries]
+  * [AboutColors]
+  * [AboutAdjusts]
+  * [AboutBehaviors]

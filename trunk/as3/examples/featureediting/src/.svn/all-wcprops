@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/94/trunk/as3/examples/featureediting/src
+END
+FeatureEditing.as
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/94/trunk/as3/examples/featureediting/src/FeatureEditing.as
+END
+MoveFeatureTool.as
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/94/trunk/as3/examples/featureediting/src/MoveFeatureTool.as
+END
+ScaleFeatureTool.as
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/94/trunk/as3/examples/featureediting/src/ScaleFeatureTool.as
+END
+IFeatureTool.as
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/94/trunk/as3/examples/featureediting/src/IFeatureTool.as
+END
+RotateFeatureTool.as
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/94/trunk/as3/examples/featureediting/src/RotateFeatureTool.as
+END

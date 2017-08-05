@@ -1,0 +1,32 @@
+#summary Utilities to aide in the use of Avatar Core
+
+*In This Document:*
+<wiki:toc />
+
+== Utility: Read Document as XML Command ==
+
+The Read Document as XML Command is a utility written for Adobe Flash Professional. It will read an open FLA document and generate Avatar Core XML from instances on the timeline (for an Avatar) and/or symbols in the Flash library (for a Library). This is helpful for creating and laying out assets in Flash and generating Avatar Core XML directly from that work.
+	
+=== Installing the Command ===
+
+Installing the command will allow you to more easily reference it for future use from the Commands menu in Flash Professional, but it is not required. The command is available in the SVN repository within the JSFL folder ([http://avatarcore.googlecode.com/svn/trunk/jsfl/Read%20Document%20as%20XML.jsfl here]);
+
+
+To install, simply copy the Read Document as XML.jsfl file into the Commands folder within your local configuration directory for Flash. Under Windows XP, this directory is:
+  * C:\Documents and Settings\`<USER_NAME>`\Local Settings\Application Data\Adobe\Flash CS4\`<LANGUAGE>`\Configuration\Commands
+
+=== Running the Command ===
+
+First, before running the command, you'll need to make sure the proper selections are made in the current FLA document.  
+
+If creating Library XML, a folder in the Flash library will need to be selected - one that contains a folder for each feature where each of those feature folders contains symbols for that particular feature. Folders in the selected folder will be used to create `<FeatureDefinition>` tags within a `<Library>` whose names match the folder names.  Each of these tags will contain `<Art>` tags in their `<artSet>` for each symbol within that folder.
+	
+If creating Avatar XML, the current timeline must contain instances with instance names matching feature names who are positioned relative to their expected position in the generated XML.  Each of these instances will generate a `<Feature>` tag within an `<Avatar>`. Each `<Feature>` tag will be named after the instance name.  When creating both `<Avatar>` and `<Library>` XML with the command, you would typically match instance names of objects on the timelines with the Feature folder names (Feature folders being folders within the selected folder in the Flash library).
+
+Once you have everything set up as desired, you can run the command.
+
+If you've installed the command, you can run the command from the Commands menu.  Otherwise, from the Commands menu, select Run Command... and find Read Document as XML.jsfl file on your hard drive.  You can also drag the command file into the titlebar of the Flash Professional application window (or the dock icon on Mac).
+
+When finished, the command will print the generated XML in the Output panel along with any comments that may indicate errors or skipped functionality.  Right-click or use the panel menu in the Output panel to copy or save the result to a file for use or further editing.
+	
+This utility command doesn't do everything you may need, but it helps you get most of the way there.

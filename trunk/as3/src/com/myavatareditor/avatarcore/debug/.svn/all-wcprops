@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/96/trunk/as3/src/com/myavatareditor/avatarcore/debug
+END
+print.as
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/96/trunk/as3/src/com/myavatareditor/avatarcore/debug/print.as
+END
+PrintLevel.as
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/96/trunk/as3/src/com/myavatareditor/avatarcore/debug/PrintLevel.as
+END
+PrintWindow.as
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/96/trunk/as3/src/com/myavatareditor/avatarcore/debug/PrintWindow.as
+END

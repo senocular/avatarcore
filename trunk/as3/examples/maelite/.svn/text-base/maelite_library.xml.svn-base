@@ -1,0 +1,1160 @@
+<?xml version="1.0" ?>
+<Library 
+	xmlns="com.myavatareditor.avatarcore"
+	xmlns:xml="com.myavatareditor.avatarcore.xml"
+	xmlns:custom="*">
+	
+	<SetCollection name="skinColors">
+		<Color rM="0.88" gM="0.85" bM="0.8" r="235" g="205" b="187" />
+		<Color rM="-0.02" gM="0.23" bM="0.39" r="248" g="187" b="124" />
+		<Color rM="0.13" gM="0.42" bM="0.44" r="214" g="134" b="71" />
+		<Color rM="-0.02" gM="0.28" bM="0.38" r="246" g="174" b="136" />
+		<Color rM="0.42" gM="0.44" bM="0.45" r="142" g="73" b="31" />
+		<Color rM="0.44" gM="0.44" bM="0.43" r="72" g="38" b="13" />
+	</SetCollection>
+
+	<SetCollection name="hairColors">
+		<Color rM="0.43" gM="0.43" bM="0.42" r="15" g="14" b="12" />
+		<Color rM="0.44" gM="0.44" bM="0.45" r="46" g="25" b="6" />
+		<Color rM="0.4" gM="0.4" bM="0.39" r="82" g="37" b="14" />
+		<Color rM="0.43" gM="0.43" bM="0.43" r="102" g="56" b="22" />
+		<Color rM="0.43" gM="0.43" bM="0.43" r="105" g="106" b="108" />
+		<Color rM="0.43" gM="0.42" bM="0.42" r="61" g="44" b="14" />
+		<Color rM="0.44" gM="0.44" bM="0.44" r="113" g="82" b="25" />
+		<Color rM="0.24" gM="0.37" bM="0.42" r="185" g="149" b="87" />
+	</SetCollection>
+	
+	<FeatureDefinition name="head" thumbnail="FeatureIcons#2">
+		<meta>
+			<Metadata thumbnailColor="1" />
+		</meta>
+		<behaviors>
+			<custom:SourceToStyle targetFeatureName="face" />
+			<custom:SourceToStyle targetFeatureName="beard" />
+			<custom:CopyColor targetFeatureName="nose" />
+		</behaviors>
+		<colorSet xml:ref="skinColors" />
+		<artSet zIndex="0">
+			<Art src="Heads#1" />
+			<Art src="Heads#2" />
+			<Art src="Heads#3" />
+			<Art src="Heads#4" />
+			<Art src="Heads#5" />
+			<Art src="Heads#6" />
+			<Art src="Heads#7" />
+			<Art src="Heads#8" />
+		</artSet>
+	</FeatureDefinition>
+	<FeatureDefinition name="face" thumbnail="FeatureIcons#3">
+		<artSet zIndex="1">
+			<Art thumbnail="FaceIcons#1">
+				<Art src="Faces#1" style="Heads#1" />
+				<Art src="Faces#2" style="Heads#2" />
+				<Art src="Faces#3" style="Heads#3" />
+				<Art src="Faces#4" style="Heads#4" />
+				<Art src="Faces#5" style="Heads#5" />
+				<Art src="Faces#6" style="Heads#6" />
+				<Art src="Faces#7" style="Heads#7" />
+				<Art src="Faces#8" style="Heads#8" />
+			</Art>
+			<Art thumbnail="FaceIcons#2">
+				<Art src="Faces#9" style="Heads#1" />
+				<Art src="Faces#10" style="Heads#2" />
+				<Art src="Faces#11" style="Heads#3" />
+				<Art src="Faces#12" style="Heads#4" />
+				<Art src="Faces#13" style="Heads#5" />
+				<Art src="Faces#14" style="Heads#6" />
+				<Art src="Faces#15" style="Heads#7" />
+				<Art src="Faces#16" style="Heads#8" />
+			</Art>
+			<Art thumbnail="FaceIcons#3">
+				<Art src="Faces#17" style="Heads#1" />
+				<Art src="Faces#18" style="Heads#2" />
+				<Art src="Faces#19" style="Heads#3" />
+				<Art src="Faces#20" style="Heads#4" />
+				<Art src="Faces#21" style="Heads#5" />
+				<Art src="Faces#22" style="Heads#6" />
+				<Art src="Faces#23" style="Heads#7" />
+				<Art src="Faces#24" style="Heads#8" />
+			</Art>
+			<Art thumbnail="FaceIcons#4">
+				<Art src="Faces#25" style="Heads#1" />
+				<Art src="Faces#26" style="Heads#2" />
+				<Art src="Faces#27" style="Heads#3" />
+				<Art src="Faces#28" style="Heads#4" />
+				<Art src="Faces#29" style="Heads#5" />
+				<Art src="Faces#30" style="Heads#6" />
+				<Art src="Faces#31" style="Heads#7" />
+				<Art src="Faces#32" style="Heads#8" />
+			</Art>
+			<Art thumbnail="FaceIcons#5">
+				<Art src="Faces#33" style="Heads#1" />
+				<Art src="Faces#34" style="Heads#2" />
+				<Art src="Faces#35" style="Heads#3" />
+				<Art src="Faces#36" style="Heads#4" />
+				<Art src="Faces#37" style="Heads#5" />
+				<Art src="Faces#38" style="Heads#6" />
+				<Art src="Faces#39" style="Heads#7" />
+				<Art src="Faces#40" style="Heads#8" />
+			</Art>
+			<Art thumbnail="FaceIcons#6">
+				<Art src="Faces#41" style="Heads#1" />
+				<Art src="Faces#42" style="Heads#2" />
+				<Art src="Faces#43" style="Heads#3" />
+				<Art src="Faces#44" style="Heads#4" />
+				<Art src="Faces#45" style="Heads#5" />
+				<Art src="Faces#46" style="Heads#6" />
+				<Art src="Faces#47" style="Heads#7" />
+				<Art src="Faces#48" style="Heads#8" />
+			</Art>
+			<Art thumbnail="FaceIcons#7">
+				<Art src="Faces#49" style="Heads#1" />
+				<Art src="Faces#50" style="Heads#2" />
+				<Art src="Faces#51" style="Heads#3" />
+				<Art src="Faces#52" style="Heads#4" />
+				<Art src="Faces#53" style="Heads#5" />
+				<Art src="Faces#54" style="Heads#6" />
+				<Art src="Faces#55" style="Heads#7" />
+				<Art src="Faces#56" style="Heads#8" />
+			</Art>
+			<Art thumbnail="FaceIcons#8">
+				<Art src="Faces#57" style="Heads#1" />
+				<Art src="Faces#58" style="Heads#2" />
+				<Art src="Faces#59" style="Heads#3" />
+				<Art src="Faces#60" style="Heads#4" />
+				<Art src="Faces#61" style="Heads#5" />
+				<Art src="Faces#62" style="Heads#6" />
+				<Art src="Faces#63" style="Heads#7" />
+				<Art src="Faces#64" style="Heads#8" />
+			</Art>
+			<Art thumbnail="FaceIcons#9">
+				<Art src="Faces#65" style="Heads#1" />
+				<Art src="Faces#66" style="Heads#2" />
+				<Art src="Faces#67" style="Heads#3" />
+				<Art src="Faces#68" style="Heads#4" />
+				<Art src="Faces#69" style="Heads#5" />
+				<Art src="Faces#70" style="Heads#6" />
+				<Art src="Faces#71" style="Heads#7" />
+				<Art src="Faces#72" style="Heads#8" />
+			</Art>
+			<Art thumbnail="FaceIcons#10">
+				<Art src="Faces#73" style="Heads#1" />
+				<Art src="Faces#74" style="Heads#2" />
+				<Art src="Faces#75" style="Heads#3" />
+				<Art src="Faces#76" style="Heads#4" />
+				<Art src="Faces#77" style="Heads#5" />
+				<Art src="Faces#78" style="Heads#6" />
+				<Art src="Faces#79" style="Heads#7" />
+				<Art src="Faces#80" style="Heads#8" />
+			</Art>
+			<Art thumbnail="FaceIcons#11">
+				<Art src="Faces#81" style="Heads#1" />
+				<Art src="Faces#82" style="Heads#2" />
+				<Art src="Faces#83" style="Heads#3" />
+				<Art src="Faces#84" style="Heads#4" />
+				<Art src="Faces#85" style="Heads#5" />
+				<Art src="Faces#86" style="Heads#6" />
+				<Art src="Faces#87" style="Heads#7" />
+				<Art src="Faces#88" style="Heads#8" />
+			</Art>
+			<Art thumbnail="FaceIcons#12">
+				<Art src="Faces#89" style="Heads#1" />
+				<Art src="Faces#90" style="Heads#2" />
+				<Art src="Faces#91" style="Heads#3" />
+				<Art src="Faces#92" style="Heads#4" />
+				<Art src="Faces#93" style="Heads#5" />
+				<Art src="Faces#94" style="Heads#6" />
+				<Art src="Faces#95" style="Heads#7" />
+				<Art src="Faces#96" style="Heads#8" />
+			</Art>
+		</artSet>
+	</FeatureDefinition>
+	<FeatureDefinition name="hairOrnaments">
+		<defaultColor rM="0.99" gM="0.47" bM="0.51" r="191" g="38" b="2" />
+		<artSet zIndex="11">
+			<Art>
+				<Art src="HairOrnaments#1" style="HairBottom#1" />
+				<Art src="HairOrnaments#2" style="HairBottom#2" />
+				<Art src="HairOrnaments#3" style="HairBottom#3" />
+				<Art src="HairOrnaments#4" style="HairBottom#4" />
+				<Art src="HairOrnaments#5" style="HairBottom#5" />
+				<Art src="HairOrnaments#6" style="HairBottom#6" />
+				<Art src="HairOrnaments#7" style="HairBottom#7" />
+				<Art src="HairOrnaments#8" style="HairBottom#8" />
+				<Art src="HairOrnaments#9" style="HairBottom#9" />
+				<Art src="HairOrnaments#10" style="HairBottom#10" />
+				<Art src="HairOrnaments#11" style="HairBottom#11" />
+				<Art src="HairOrnaments#12" style="HairBottom#12" />
+				<Art src="HairOrnaments#13" style="HairBottom#13" />
+				<Art src="HairOrnaments#14" style="HairBottom#14" />
+				<Art src="HairOrnaments#15" style="HairBottom#15" />
+				<Art src="HairOrnaments#16" style="HairBottom#16" />
+				<Art src="HairOrnaments#17" style="HairBottom#17" />
+				<Art src="HairOrnaments#18" style="HairBottom#18" />
+				<Art src="HairOrnaments#19" style="HairBottom#19" />
+				<Art src="HairOrnaments#20" style="HairBottom#20" />
+				<Art src="HairOrnaments#21" style="HairBottom#21" />
+				<Art src="HairOrnaments#22" style="HairBottom#22" />
+				<Art src="HairOrnaments#23" style="HairBottom#23" />
+				<Art src="HairOrnaments#24" style="HairBottom#24" />
+				<Art src="HairOrnaments#25" style="HairBottom#25" />
+				<Art src="HairOrnaments#26" style="HairBottom#26" />
+				<Art src="HairOrnaments#27" style="HairBottom#27" />
+				<Art src="HairOrnaments#28" style="HairBottom#28" />
+				<Art src="HairOrnaments#29" style="HairBottom#29" />
+				<Art src="HairOrnaments#30" style="HairBottom#30" />
+				<Art src="HairOrnaments#31" style="HairBottom#31" />
+				<Art src="HairOrnaments#32" style="HairBottom#32" />
+				<Art src="HairOrnaments#33" style="HairBottom#33" />
+				<Art src="HairOrnaments#34" style="HairBottom#34" />
+				<Art src="HairOrnaments#35" style="HairBottom#35" />
+				<Art src="HairOrnaments#36" style="HairBottom#36" />
+				<Art src="HairOrnaments#37" style="HairBottom#37" />
+				<Art src="HairOrnaments#38" style="HairBottom#38" />
+				<Art src="HairOrnaments#39" style="HairBottom#39" />
+				<Art src="HairOrnaments#40" style="HairBottom#40" />
+				<Art src="HairOrnaments#41" style="HairBottom#41" />
+				<Art src="HairOrnaments#42" style="HairBottom#42" />
+				<Art src="HairOrnaments#43" style="HairBottom#43" />
+				<Art src="HairOrnaments#44" style="HairBottom#44" />
+				<Art src="HairOrnaments#45" style="HairBottom#45" />
+				<Art src="HairOrnaments#46" style="HairBottom#46" />
+				<Art src="HairOrnaments#47" style="HairBottom#47" />
+				<Art src="HairOrnaments#48" style="HairBottom#48" />
+				<Art src="HairOrnaments#50" style="HairBottom#50" />
+				<Art src="HairOrnaments#51" style="HairBottom#51" />
+				<Art src="HairOrnaments#52" style="HairBottom#52" />
+				<Art src="HairOrnaments#53" style="HairBottom#53" />
+				<Art src="HairOrnaments#54" style="HairBottom#54" />
+				<Art src="HairOrnaments#55" style="HairBottom#55" />
+				<Art src="HairOrnaments#56" style="HairBottom#56" />
+				<Art src="HairOrnaments#57" style="HairBottom#57" />
+				<Art src="HairOrnaments#58" style="HairBottom#58" />
+				<Art src="HairOrnaments#59" style="HairBottom#59" />
+				<Art src="HairOrnaments#60" style="HairBottom#60" />
+				<Art src="HairOrnaments#61" style="HairBottom#61" />
+				<Art src="HairOrnaments#62" style="HairBottom#62" />
+				<Art src="HairOrnaments#63" style="HairBottom#63" />
+				<Art src="HairOrnaments#64" style="HairBottom#64" />
+				<Art src="HairOrnaments#65" style="HairBottom#65" />
+				<Art src="HairOrnaments#66" style="HairBottom#66" />
+				<Art src="HairOrnaments#67" style="HairBottom#67" />
+				<Art src="HairOrnaments#68" style="HairBottom#68" />
+				<Art src="HairOrnaments#69" style="HairBottom#69" />
+				<Art src="HairOrnaments#70" style="HairBottom#70" />
+				<Art src="HairOrnaments#71" style="HairBottom#71" />
+				<Art src="HairOrnaments#72" style="HairBottom#72" />
+			</Art>
+		</artSet>
+	</FeatureDefinition>
+	<FeatureDefinition name="hair" thumbnail="FeatureIcons#4">
+		<behaviors>
+			<custom:SourceToStyle targetFeatureName="hairOrnaments" />
+		</behaviors>
+		<colorSet xml:ref="hairColors" />
+		<artSet zIndex="10">
+			<Art>
+				<Art src="HairBottom#1" zIndex="-1" />
+				<Art src="HairTop#1" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#2" zIndex="-1" />
+				<Art src="HairTop#2" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#3" zIndex="-1" />
+				<Art src="HairTop#3" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#4" zIndex="-1" />
+				<Art src="HairTop#4" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#5" zIndex="-1" />
+				<Art src="HairTop#5" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#6" zIndex="-1" />
+				<Art src="HairTop#6" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#7" zIndex="-1" />
+				<Art src="HairTop#7" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#8" zIndex="-1" />
+				<Art src="HairTop#8" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#9" zIndex="-1" />
+				<Art src="HairTop#9" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#10" zIndex="-1" />
+				<Art src="HairTop#10" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#11" zIndex="-1" />
+				<Art src="HairTop#11" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#12" zIndex="-1" />
+				<Art src="HairTop#12" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#13" zIndex="-1" />
+				<Art src="HairTop#13" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#14" zIndex="-1" />
+				<Art src="HairTop#14" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#15" zIndex="-1" />
+				<Art src="HairTop#15" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#16" zIndex="-1" />
+				<Art src="HairTop#16" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#17" zIndex="-1" />
+				<Art src="HairTop#17" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#18" zIndex="-1" />
+				<Art src="HairTop#18" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#19" zIndex="-1" />
+				<Art src="HairTop#19" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#20" zIndex="-1" />
+				<Art src="HairTop#20" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#21" zIndex="-1" />
+				<Art src="HairTop#21" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#22" zIndex="-1" />
+				<Art src="HairTop#22" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#23" zIndex="-1" />
+				<Art src="HairTop#23" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#24" zIndex="-1" />
+				<Art src="HairTop#24" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#25" zIndex="-1" />
+				<Art src="HairTop#25" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#26" zIndex="-1" />
+				<Art src="HairTop#26" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#27" zIndex="-1" />
+				<Art src="HairTop#27" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#28" zIndex="-1" />
+				<Art src="HairTop#28" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#29" zIndex="-1" />
+				<Art src="HairTop#29" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#30" zIndex="-1" />
+				<Art src="HairTop#30" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#31" zIndex="-1" />
+				<Art src="HairTop#31" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#32" zIndex="-1" />
+				<Art src="HairTop#32" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#33" zIndex="-1" />
+				<Art src="HairTop#33" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#34" zIndex="-1" />
+				<Art src="HairTop#34" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#35" zIndex="-1" />
+				<Art src="HairTop#35" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#36" zIndex="-1" />
+				<Art src="HairTop#36" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#37" zIndex="-1" />
+				<Art src="HairTop#37" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#38" zIndex="-1" />
+				<Art src="HairTop#38" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#39" zIndex="-1" />
+				<Art src="HairTop#39" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#40" zIndex="-1" />
+				<Art src="HairTop#40" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#41" zIndex="-1" />
+				<Art src="HairTop#41" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#42" zIndex="-1" />
+				<Art src="HairTop#42" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#43" zIndex="-1" />
+				<Art src="HairTop#43" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#44" zIndex="-1" />
+				<Art src="HairTop#44" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#45" zIndex="-1" />
+				<Art src="HairTop#45" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#46" zIndex="-1" />
+				<Art src="HairTop#46" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#47" zIndex="-1" />
+				<Art src="HairTop#47" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#48" zIndex="-1" />
+				<Art src="HairTop#48" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#49" zIndex="-1" />
+				<Art src="HairTop#49" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#50" zIndex="-1" />
+				<Art src="HairTop#50" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#51" zIndex="-1" />
+				<Art src="HairTop#51" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#52" zIndex="-1" />
+				<Art src="HairTop#52" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#53" zIndex="-1" />
+				<Art src="HairTop#53" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#54" zIndex="-1" />
+				<Art src="HairTop#54" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#55" zIndex="-1" />
+				<Art src="HairTop#55" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#56" zIndex="-1" />
+				<Art src="HairTop#56" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#57" zIndex="-1" />
+				<Art src="HairTop#57" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#58" zIndex="-1" />
+				<Art src="HairTop#58" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#59" zIndex="-1" />
+				<Art src="HairTop#59" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#60" zIndex="-1" />
+				<Art src="HairTop#60" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#61" zIndex="-1" />
+				<Art src="HairTop#61" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#62" zIndex="-1" />
+				<Art src="HairTop#62" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#63" zIndex="-1" />
+				<Art src="HairTop#63" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#64" zIndex="-1" />
+				<Art src="HairTop#64" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#65" zIndex="-1" />
+				<Art src="HairTop#65" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#66" zIndex="-1" />
+				<Art src="HairTop#66" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#67" zIndex="-1" />
+				<Art src="HairTop#67" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#68" zIndex="-1" />
+				<Art src="HairTop#68" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#69" zIndex="-1" />
+				<Art src="HairTop#69" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#70" zIndex="-1" />
+				<Art src="HairTop#70" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#71" zIndex="-1" />
+				<Art src="HairTop#71" />
+			</Art>
+			<Art>
+				<Art src="HairBottom#72" zIndex="-1" />
+				<Art src="HairTop#72" />
+			</Art>
+		</artSet>
+	</FeatureDefinition>
+	<FeatureDefinition name="eyebrows" thumbnail="FeatureIcons#5">
+		<defaultAdjust x="-7.5" y="-21" />
+		<behaviors>
+			<Constrain name="constrain">
+				<x min="0" max="52.5" steps="13" />
+				<y min="-59" max="25" steps="16" />
+				<scale min=".25" max="1" steps="9" />
+				<rotation min="0" max="125" steps="12" />
+			</Constrain>
+			<Mirror />
+		</behaviors>
+		<colorSet xml:ref="hairColors" />
+		<artSet zIndex="9">
+			<Art src="EyeBrows#1" />
+			<Art src="EyeBrows#2" />
+			<Art src="EyeBrows#3" />
+			<Art src="EyeBrows#4" />
+			<Art src="EyeBrows#5" />
+			<Art src="EyeBrows#6" />
+			<Art src="EyeBrows#7" />
+			<Art src="EyeBrows#8" />
+			<Art src="EyeBrows#9" />
+			<Art src="EyeBrows#10" />
+			<Art src="EyeBrows#11" />
+			<Art src="EyeBrows#12" />
+			<Art src="EyeBrows#13" />
+			<Art src="EyeBrows#14" />
+			<Art src="EyeBrows#15" />
+			<Art src="EyeBrows#16" />
+			<Art src="EyeBrows#17" />
+			<Art src="EyeBrows#18" />
+			<Art src="EyeBrows#19" />
+			<Art src="EyeBrows#20" />
+			<Art src="EyeBrows#21" />
+			<Art src="EyeBrows#22" />
+			<Art src="EyeBrows#23" />
+			<Art src="EyeBrows#24" />
+		</artSet>
+	</FeatureDefinition>
+	<FeatureDefinition name="eyes" thumbnail="FeatureIcons#6">
+		<meta>
+			<Metadata thumbnailColor="4" />
+		</meta>
+		<defaultAdjust x="-2" y="-5.5" />
+		<behaviors>
+			<Constrain name="constrain">
+				<x min="0" max="54" steps="13" />
+				<y min="-69" max="35" steps="19" />
+				<scale min=".26" max="1" steps="8" />
+				<rotation min="0" max="81.5" steps="8" />
+			</Constrain>
+			<Mirror />
+		</behaviors>
+		<colorSet>
+			<Color rM="0" gM="0" bM="0" />
+			<Color rM="0.09" gM="0.11" bM="0.1" r="109" g="123" b="124" />
+			<Color rM="0.22" gM="0.24" bM="0.25" r="108" g="80" b="65" />
+			<Color rM="0.13" gM="0.14" bM="0.22" r="122" g="122" b="40" />
+			<Color rM="0.21" gM="0.21" bM="0.27" r="84" g="110" b="180" />
+			<Color rM="0.16" gM="0.15" bM="0.11" r="48" g="140" b="79" />
+		</colorSet>
+		<artSet zIndex="6" colorize="0">
+			<Art>
+				<Art src="EyesBottom#1" />
+				<Art src="Eyeballs#1" colorize="1" />
+				<Art src="EyesTop#1" />
+			</Art>
+			<Art>
+				<Art src="EyesBottom#2" />
+				<Art src="Eyeballs#2" colorize="1" />
+				<Art src="EyesTop#2" />
+			</Art>
+			<Art>
+				<Art src="EyesBottom#3" />
+				<Art src="Eyeballs#3" colorize="1" />
+				<Art src="EyesTop#3" />
+			</Art>
+			<Art>
+				<Art src="EyesBottom#4" />
+				<Art src="Eyeballs#4" colorize="1" />
+				<Art src="EyesTop#4" />
+			</Art>
+			<Art>
+				<Art src="EyesBottom#5" />
+				<Art src="Eyeballs#5" colorize="1" />
+				<Art src="EyesTop#5" />
+			</Art>
+			<Art>
+				<Art src="EyesBottom#6" />
+				<Art src="Eyeballs#6" colorize="1" />
+				<Art src="EyesTop#6" />
+			</Art>
+			<Art>
+				<Art src="EyesBottom#7" />
+				<Art src="Eyeballs#7" colorize="1" />
+				<Art src="EyesTop#7" />
+			</Art>
+			<Art>
+				<Art src="EyesBottom#8" />
+				<Art src="Eyeballs#8" colorize="1" />
+				<Art src="EyesTop#8" />
+			</Art>
+			<Art>
+				<Art src="EyesBottom#9" />
+				<Art src="Eyeballs#9" colorize="1" />
+				<Art src="EyesTop#9" />
+			</Art>
+			<Art>
+				<Art src="EyesBottom#10" />
+				<Art src="Eyeballs#10" colorize="1" />
+				<Art src="EyesTop#10" />
+			</Art>
+			<Art>
+				<Art src="EyesBottom#11" />
+				<Art src="Eyeballs#11" colorize="1" />
+				<Art src="EyesTop#11" />
+			</Art>
+			<Art>
+				<Art src="EyesBottom#12" />
+				<Art src="Eyeballs#12" colorize="1" />
+				<Art src="EyesTop#12" />
+			</Art>
+			<Art>
+				<Art src="EyesBottom#13" />
+				<Art src="Eyeballs#13" colorize="1" />
+				<Art src="EyesTop#13" />
+			</Art>
+			<Art>
+				<Art src="EyesBottom#14" />
+				<Art src="Eyeballs#14" colorize="1" />
+				<Art src="EyesTop#14" />
+			</Art>
+			<Art>
+				<Art src="EyesBottom#15" />
+				<Art src="Eyeballs#15" colorize="1" />
+				<Art src="EyesTop#15" />
+			</Art>
+			<Art>
+				<Art src="EyesBottom#16" />
+				<Art src="Eyeballs#16" colorize="1" />
+				<Art src="EyesTop#16" />
+			</Art>
+			<Art>
+				<Art src="EyesBottom#17" />
+				<Art src="Eyeballs#17" colorize="1" />
+				<Art src="EyesTop#17" />
+			</Art>
+			<Art>
+				<Art src="EyesBottom#18" />
+				<Art src="Eyeballs#18" colorize="1" />
+				<Art src="EyesTop#18" />
+			</Art>
+			<Art>
+				<Art src="EyesBottom#19" />
+				<Art src="Eyeballs#19" colorize="1" />
+				<Art src="EyesTop#19" />
+			</Art>
+			<Art>
+				<Art src="EyesBottom#20" />
+				<Art src="Eyeballs#20" colorize="1" />
+				<Art src="EyesTop#20" />
+			</Art>
+			<Art>
+				<Art src="EyesBottom#21" />
+				<Art src="Eyeballs#21" colorize="1" />
+				<Art src="EyesTop#21" />
+			</Art>
+			<Art>
+				<Art src="EyesBottom#22" />
+				<Art src="Eyeballs#22" colorize="1" />
+				<Art src="EyesTop#22" />
+			</Art>
+			<Art>
+				<Art src="EyesBottom#23" />
+				<Art src="Eyeballs#23" colorize="1" />
+				<Art src="EyesTop#23" />
+			</Art>
+			<Art>
+				<Art src="EyesBottom#24" />
+				<Art src="Eyeballs#24" colorize="1" />
+				<Art src="EyesTop#24" />
+			</Art>
+			<Art>
+				<Art src="EyesBottom#25" />
+				<Art src="Eyeballs#25" colorize="1" />
+				<Art src="EyesTop#25" />
+			</Art>
+			<Art>
+				<Art src="EyesBottom#26" />
+				<Art src="Eyeballs#26" colorize="1" />
+				<Art src="EyesTop#26" />
+			</Art>
+			<Art>
+				<Art src="EyesBottom#27" />
+				<Art src="Eyeballs#27" colorize="1" />
+				<Art src="EyesTop#27" />
+			</Art>
+			<Art>
+				<Art src="EyesBottom#28" />
+				<Art src="Eyeballs#28" colorize="1" />
+				<Art src="EyesTop#28" />
+			</Art>
+			<Art>
+				<Art src="EyesBottom#29" />
+				<Art src="Eyeballs#29" colorize="1" />
+				<Art src="EyesTop#29" />
+			</Art>
+			<Art>
+				<Art src="EyesBottom#30" />
+				<Art src="Eyeballs#30" colorize="1" />
+				<Art src="EyesTop#30" />
+			</Art>
+			<Art>
+				<Art src="EyesBottom#31" />
+				<Art src="Eyeballs#31" colorize="1" />
+				<Art src="EyesTop#31" />
+			</Art>
+			<Art>
+				<Art src="EyesBottom#32" />
+				<Art src="Eyeballs#32" colorize="1" />
+				<Art src="EyesTop#32" />
+			</Art>
+			<Art>
+				<Art src="EyesBottom#33" />
+				<Art src="Eyeballs#33" colorize="1" />
+				<Art src="EyesTop#33" />
+			</Art>
+			<Art>
+				<Art src="EyesBottom#34" />
+				<Art src="Eyeballs#34" colorize="1" />
+				<Art src="EyesTop#34" />
+			</Art>
+			<Art>
+				<Art src="EyesBottom#35" />
+				<Art src="Eyeballs#35" colorize="1" />
+				<Art src="EyesTop#35" />
+			</Art>
+			<Art>
+				<Art src="EyesBottom#36" />
+				<Art src="Eyeballs#36" colorize="1" />
+				<Art src="EyesTop#36" />
+			</Art>
+			<Art>
+				<Art src="EyesBottom#37" />
+				<Art src="Eyeballs#37" colorize="1" />
+				<Art src="EyesTop#37" />
+			</Art>
+			<Art>
+				<Art src="EyesBottom#38" />
+				<Art src="Eyeballs#38" colorize="1" />
+				<Art src="EyesTop#38" />
+			</Art>
+			<Art>
+				<Art src="EyesBottom#39" />
+				<Art src="Eyeballs#39" colorize="1" />
+				<Art src="EyesTop#39" />
+			</Art>
+			<Art>
+				<Art src="EyesBottom#40" />
+				<Art src="Eyeballs#40" colorize="1" />
+				<Art src="EyesTop#40" />
+			</Art>
+			<Art>
+				<Art src="EyesBottom#41" />
+				<Art src="Eyeballs#41" colorize="1" />
+				<Art src="EyesTop#41" />
+			</Art>
+			<Art>
+				<Art src="EyesBottom#42" />
+				<Art src="Eyeballs#42" colorize="1" />
+				<Art src="EyesTop#42" />
+			</Art>
+			<Art>
+				<Art src="EyesBottom#43" />
+				<Art src="Eyeballs#43" colorize="1" />
+				<Art src="EyesTop#43" />
+			</Art>
+			<Art>
+				<Art src="EyesBottom#44" />
+				<Art src="Eyeballs#44" colorize="1" />
+				<Art src="EyesTop#44" />
+			</Art>
+			<Art>
+				<Art src="EyesBottom#45" />
+				<Art src="Eyeballs#45" colorize="1" />
+				<Art src="EyesTop#45" />
+			</Art>
+			<Art>
+				<Art src="EyesBottom#46" />
+				<Art src="Eyeballs#46" colorize="1" />
+				<Art src="EyesTop#46" />
+			</Art>
+			<Art>
+				<Art src="EyesBottom#47" />
+				<Art src="Eyeballs#47" colorize="1" />
+				<Art src="EyesTop#47" />
+			</Art>
+			<Art>
+				<Art src="EyesBottom#48" />
+				<Art src="Eyeballs#48" colorize="1" />
+				<Art src="EyesTop#48" />
+			</Art>
+		</artSet>
+	</FeatureDefinition>
+	<FeatureDefinition name="glasses" thumbnail="FeatureIcons#7">
+		<behaviors>
+			<Constrain name="constrain">
+				<y min="-47" max="49" steps="21" />
+				<scale min=".4" max="1.46" steps="8" />
+			</Constrain>
+		</behaviors>
+		<colorSet>
+			<Color rM="0.17" gM="0.18" bM="0.18" r="76" g="85" b="84" />
+			<Color rM="0.28" gM="0.31" bM="0.37" r="105" g="81" b="21" />
+			<Color rM="0.09" gM="0.37" bM="0.41" r="163" g="43" b="16" />
+			<Color rM="0.37" gM="0.31" bM="0.19" r="23" g="69" b="128" />
+			<Color rM="0.15" gM="0.19" bM="0.29" r="169" g="107" b="8" />
+			<Color rM="0.21" gM="0.22" bM="0.24" r="171" g="172" b="164" />
+		</colorSet>
+		<artSet zIndex="15">
+			<Art>
+				<Art src="GlassesLenses#1" />
+				<Art src="Glasses#1" />
+			</Art>
+			<Art>
+				<Art src="GlassesLenses#2" />
+				<Art src="Glasses#2" />
+			</Art>
+			<Art>
+				<Art src="GlassesLenses#3" />
+				<Art src="Glasses#3" />
+			</Art>
+			<Art>
+				<Art src="GlassesLenses#4" />
+				<Art src="Glasses#4" />
+			</Art>
+			<Art>
+				<Art src="GlassesLenses#5" />
+				<Art src="Glasses#5" />
+			</Art>
+			<Art>
+				<Art src="GlassesLenses#6" />
+				<Art src="Glasses#6" />
+			</Art>
+			<Art>
+				<Art src="GlassesLenses#7" />
+				<Art src="Glasses#7" colorize="0" />
+			</Art>
+			<Art>
+				<Art src="GlassesLenses#8" />
+				<Art src="Glasses#8" colorize="0" />
+			</Art>
+			<Art>
+				<Art src="GlassesLenses#9" />
+				<Art src="Glasses#9" colorize="0" />
+			</Art>
+		</artSet>
+	</FeatureDefinition>
+	<FeatureDefinition name="nose" thumbnail="FeatureIcons#8">
+		<meta>
+			<Metadata thumbnailColor="1" />
+		</meta>
+		<defaultAdjust y="22" />
+		<colorSet xml:ref="skinColors" />
+		<behaviors>
+			<Constrain name="constrain">
+				<y min="-10" max="70" steps="19" />
+				<scale min=".2" max="1" steps="9" />
+			</Constrain>
+			<custom:CopyColor targetFeatureName="head" />
+		</behaviors>
+		<artSet zIndex="13">
+			<Art>
+				<Art src="NosesBottom#1" />
+				<Art src="NosesTop#1" colorize="0" />
+			</Art>
+			<Art>
+				<Art src="NosesBottom#2" />
+				<Art src="NosesTop#2" colorize="0" />
+			</Art>
+			<Art>
+				<Art src="NosesBottom#3" />
+				<Art src="NosesTop#3" colorize="0" />
+			</Art>
+			<Art>
+				<Art src="NosesBottom#4" />
+				<Art src="NosesTop#4" colorize="0" />
+			</Art>
+			<Art>
+				<Art src="NosesBottom#5" />
+				<Art src="NosesTop#5" colorize="0" />
+			</Art>
+			<Art>
+				<Art src="NosesBottom#6" />
+				<Art src="NosesTop#6" colorize="0" />
+			</Art>
+			<Art>
+				<Art src="NosesBottom#7" />
+				<Art src="NosesTop#7" colorize="0" />
+			</Art>
+			<Art>
+				<Art src="NosesBottom#8" />
+				<Art src="NosesTop#8" colorize="0" />
+			</Art>
+			<Art>
+				<Art src="NosesBottom#9" />
+				<Art src="NosesTop#9" colorize="0" />
+			</Art>
+			<Art>
+				<Art src="NosesBottom#10" />
+				<Art src="NosesTop#10" colorize="0" />
+			</Art>
+			<Art>
+				<Art src="NosesBottom#11" />
+				<Art src="NosesTop#11" colorize="0" />
+			</Art>
+			<Art>
+				<Art src="NosesBottom#12" />
+				<Art src="NosesTop#12" colorize="0" />
+			</Art>
+		</artSet>
+	</FeatureDefinition>
+	<FeatureDefinition name="mouth" thumbnail="FeatureIcons#9">
+		<defaultAdjust y="75" />
+		<behaviors>
+			<Constrain name="constrain">
+				<y min="-11" max="89" steps="19" />
+				<scale min=".218" max="1" steps="9" />
+			</Constrain>
+		</behaviors>
+		<colorSet>
+			<Color rM=".7" gM="0.6" bM="0.55" r="180" g="69" b="35" />
+			<Color rM="1" gM="0.45" bM="0.3" r="220" g="51" b="40" />
+			<Color rM="1" gM="0.6" bM="0.6" r="197" g="84" b="86" />
+		</colorSet>
+		<artSet zIndex="4">
+			<Art>
+				<Art src="MouthsBottom#1" />
+				<Art src="MouthsTop#1" colorize="0" />
+			</Art>
+			<Art>
+				<Art src="MouthsBottom#2" />
+				<Art src="MouthsTop#2" colorize="0" />
+			</Art>
+			<Art>
+				<Art src="MouthsBottom#3" />
+				<Art src="MouthsTop#3" colorize="0" />
+			</Art>
+			<Art>
+				<Art src="MouthsBottom#4" />
+				<Art src="MouthsTop#4" colorize="0" />
+			</Art>
+			<Art>
+				<Art src="MouthsBottom#5" />
+				<Art src="MouthsTop#5" colorize="0" />
+			</Art>
+			<Art>
+				<Art src="MouthsBottom#6" />
+				<Art src="MouthsTop#6" colorize="0" />
+			</Art>
+			<Art>
+				<Art src="MouthsBottom#7" />
+				<Art src="MouthsTop#7" colorize="0" />
+			</Art>
+			<Art>
+				<Art src="MouthsBottom#8" />
+				<Art src="MouthsTop#8" colorize="0" />
+			</Art>
+			<Art>
+				<Art src="MouthsBottom#9" />
+				<Art src="MouthsTop#9" colorize="0" />
+			</Art>
+			<Art>
+				<Art src="MouthsBottom#10" />
+				<Art src="MouthsTop#10" colorize="0" />
+			</Art>
+			<Art>
+				<Art src="MouthsBottom#11" />
+				<Art src="MouthsTop#11" colorize="0" />
+			</Art>
+			<Art>
+				<Art src="MouthsBottom#12" />
+				<Art src="MouthsTop#12" colorize="0" />
+			</Art>
+			<Art>
+				<Art src="MouthsBottom#13" />
+				<Art src="MouthsTop#13" colorize="0" />
+			</Art>
+			<Art>
+				<Art src="MouthsBottom#14" />
+				<Art src="MouthsTop#14" colorize="0" />
+			</Art>
+			<Art>
+				<Art src="MouthsBottom#15" />
+				<Art src="MouthsTop#15" colorize="0" />
+			</Art>
+			<Art>
+				<Art src="MouthsBottom#16" />
+				<Art src="MouthsTop#16" colorize="0" />
+			</Art>
+			<Art>
+				<Art src="MouthsBottom#17" />
+				<Art src="MouthsTop#17" colorize="0" />
+			</Art>
+			<Art>
+				<Art src="MouthsBottom#18" />
+				<Art src="MouthsTop#18" colorize="0" />
+			</Art>
+			<Art>
+				<Art src="MouthsBottom#19" />
+				<Art src="MouthsTop#19" colorize="0" />
+			</Art>
+			<Art>
+				<Art src="MouthsBottom#20" />
+				<Art src="MouthsTop#20" colorize="0" />
+			</Art>
+			<Art>
+				<Art src="MouthsBottom#21" />
+				<Art src="MouthsTop#21" colorize="0" />
+			</Art>
+			<Art>
+				<Art src="MouthsBottom#22" />
+				<Art src="MouthsTop#22" colorize="0" />
+			</Art>
+			<Art>
+				<Art src="MouthsBottom#23" />
+				<Art src="MouthsTop#23" colorize="0" />
+			</Art>
+			<Art>
+				<Art src="MouthsBottom#24" />
+				<Art src="MouthsTop#24" colorize="0" />
+			</Art>
+		</artSet>
+	</FeatureDefinition>
+	<FeatureDefinition name="mustache" thumbnail="FeatureIcons#10">
+		<defaultAdjust y="57" />
+		<colorSet xml:ref="hairColors" />
+		<behaviors>
+			<Constrain name="constrain">
+				<y min="0" max="86" steps="17" />
+				<scale min=".25" max="1" steps="9" />
+			</Constrain>
+			<custom:CopyColor targetFeatureName="beard" />
+		</behaviors>
+		<artSet zIndex="12">
+			<Art src="Mustaches#1" />
+			<Art src="Mustaches#2" />
+			<Art src="Mustaches#3" />
+			<Art src="Mustaches#4" />
+		</artSet>
+	</FeatureDefinition>
+	<FeatureDefinition name="beard" thumbnail="FeatureIcons#11">
+		<defaultAdjust y="92" />
+		<colorSet xml:ref="hairColors" />
+		<behaviors>
+			<custom:CopyColor targetFeatureName="mustache" />
+		</behaviors>
+		<artSet zIndex="2">
+			<Art thumbnail="BeardIcons#1">
+				<Art src="Beards#1" style="Heads#1" />
+				<Art src="Beards#2" style="Heads#2" />
+				<Art src="Beards#3" style="Heads#3" />
+				<Art src="Beards#4" style="Heads#4" />
+				<Art src="Beards#5" style="Heads#5" />
+				<Art src="Beards#6" style="Heads#6" />
+				<Art src="Beards#7" style="Heads#7" />
+				<Art src="Beards#8" style="Heads#8" />
+			</Art>
+			<Art thumbnail="BeardIcons#2">
+				<Art src="Beards#9" style="Heads#1" />
+				<Art src="Beards#10" style="Heads#2" />
+				<Art src="Beards#11" style="Heads#3" />
+				<Art src="Beards#12" style="Heads#4" />
+				<Art src="Beards#13" style="Heads#5" />
+				<Art src="Beards#14" style="Heads#6" />
+				<Art src="Beards#15" style="Heads#7" />
+				<Art src="Beards#16" style="Heads#8" />
+			</Art>
+			<Art thumbnail="BeardIcons#3">
+				<Art src="Beards#17" style="Heads#1" />
+				<Art src="Beards#18" style="Heads#2" />
+				<Art src="Beards#19" style="Heads#3" />
+				<Art src="Beards#20" style="Heads#4" />
+				<Art src="Beards#21" style="Heads#5" />
+				<Art src="Beards#22" style="Heads#6" />
+				<Art src="Beards#23" style="Heads#7" />
+				<Art src="Beards#24" style="Heads#8" />
+			</Art>
+			<Art thumbnail="BeardIcons#4">
+				<Art src="Beards#25" style="Heads#1" />
+				<Art src="Beards#26" style="Heads#2" />
+				<Art src="Beards#27" style="Heads#3" />
+				<Art src="Beards#28" style="Heads#4" />
+				<Art src="Beards#29" style="Heads#5" />
+				<Art src="Beards#30" style="Heads#6" />
+				<Art src="Beards#31" style="Heads#7" />
+				<Art src="Beards#32" style="Heads#8" />
+			</Art>
+		</artSet>
+	</FeatureDefinition>
+	<FeatureDefinition name="mole" thumbnail="FeatureIcons#12">
+		<defaultAdjust y="65" />
+		<behaviors>
+			<Constrain name="constrain">
+				<x min="-71" max="71" steps="17" />
+				<y min="-60" max="100" steps="31" />
+				<scale min=".4" max="1.25" steps="9" />
+			</Constrain>
+		</behaviors>
+		<artSet zIndex="3">
+			<Art src="Moles#1" />
+			<Art src="Moles#2" />
+		</artSet>
+	</FeatureDefinition>
+</Library>

@@ -1,0 +1,40 @@
+#summary Learn more about using Colors in Avatar Core.
+#labels Phase-Implementation
+_(Last updated for ver 0.5.5)_
+
+Colors in Avatar Core are used to change the color of Feature Art.  They are based off of flash.geom.ColorTransform and can add to or multiply any red, green, blue, or alpha channel within Art graphics.
+
+API: [http://www.myavatareditor.com/avatarcore/docs/index.html?com/myavatareditor/avatarcore/Color.html&com/myavatareditor/avatarcore/class-list.html Color Class]
+
+*In This Document*
+<wiki:toc />
+
+
+== Colors in Features ==
+
+Color objects, like Art objects, are defined in Features.  Feature.color stores any color transform to be applied to the Art.  When null, no color changes are made.
+
+Unlike Adjust objects, Colors are not inherited through parent Features.
+
+Color changes do not affect Art whose colorize properties are 0.
+
+
+== Color Values == 
+
+Color can be set directly using the Color.color property or through the individual offset or multiplier values. Color.color maps directly to the offsets.
+
+When Color is applied to Art assets, the following formula is used for each pixel used to render the graphics.
+
+  * New red value = (old red value `*` redMultiplier) + redOffset
+  * New green value = (old green value `*` greenMultiplier) + greenOffset
+  * New blue value = (old blue value `*` blueMultiplier) + blueOffset
+  * New alpha value = (old alpha value `*` alphaMultiplier) + alphaOffset
+
+
+== Where to go from here ==
+  * [AboutFeatures]
+  * [AboutArt]
+  * [AboutXMLParsing]
+  * [AboutLibraries]
+  * [AboutAdjusts]
+  * [AboutBehaviors]

@@ -1,0 +1,68 @@
+#summary Learn more about using Art in Features in Avatar Core.
+#labels Phase-Implementation
+_(Last updated for ver 0.2.1)_
+
+Art is the core of what makes an avatar an avatar.  It defines the unique graphical appearance that separates one user from another.  The Avatar Core framework takes various pieces of art and puts them together to create an avatar character. These pieces of art are represented in the framework with Art objects.
+
+API: [http://www.myavatareditor.com/avatarcore/docs/index.html?com/myavatareditor/avatarcore/Art.html&com/myavatareditor/avatarcore/class-list.html Art Class]
+
+*In This Document:*
+<wiki:toc />
+
+
+== Defining Appearance ==
+
+An Art object represents what a Feature looks like.  More specifically, it is a container that references what graphical asset(s) should be loaded and displayed when a specific Feature is rendered.  Art contains the following properties related to asset rendering:
+
+  * src - The source (reference) to the graphical art. This can be a class name or link to external content such as a JPEG or SWF file
+  * x - A horizontal offset for art once loaded (useful for defining registration points)
+  * y - A vertical offset for art once loaded (useful for defining registration points)
+  * smoothing - (Bitmaps only) Determines whether or not bitmap assets are smoothed
+  * colorize - Determines whether or not color is applied to the art asset when drawn
+  * zIndex - Specifies arrangement of the art asset when drawn
+
+Art objects themselves are not drawn.  Drawing is handled by an AvatarDisplay object.  What an Art object references ultimately ends up within an ArtSprite on the screen.
+
+=== Registration Points ===
+
+Registration points are the "center" points of graphics - or at least the point from which a graphic is manipulated.  Location, scale, and rotation are all based on a graphic's registration point.
+
+For Art created from class definitions, these registration points are usually pre-defined since those assets are usually built around the the center point of the coordinate space.  For the case of dynamically loaded images, however, the registration point defaults to the top left of the art.  This means everything is based off of the top left, which can be especially difficult to handle when rotation is involved.
+
+Art.x and Art.y provide a means to adjust registration points by offsetting loaded content by specified pixel values along the x and y coordinates.  For loaded images, to center the registration point, the x value should be set to negative image width/2 and y to negative image height/2.  This would require that you know the size of your image beforehand since Art.x and Art.y are absolute values.
+
+{{{
+<!-- myImage width=100, height=200 -->
+<Art src="myImage.jpg" x="-50" y="-100" />
+}}}
+
+== One Art for Many ==
+
+Art objects are collections.  As collections, they can contain other "item" objects.  The purpose for Art being a collection object is so that it can contain other Art objects.  If one Art object contains one or more other Art objects, it becomes a container for those other Art objects and no longer represents graphical content.  As a container, however, it still represents the "art" for a Feature - its just an Art comprised of many other smaller pieces.
+
+Using multiple Art objects for Features can be useful for a couple of reasons.  For one, it allows parts of a Feature's art to be affected by color.  For example you might have an eye Feature where the iris can have a custom color.  If the Feature only had one Art asset to represent the entire eye and a color change was applied, the entire eye would change in color, not just the iris.  By separating the iris as a separate piece of Art and setting the colorize of the other Art to 0, only the iris will change with the Feature's change in color.
+
+Multiple Art objects for Features can also be useful when dealing with overlapping and arrangement.  Consider a hoop earring Feature.  A hooped earring should appear both behind and in front of the ear.  A single graphical asset cannot make this possible, especially if that earring can be moved around within the location of the ear.  By separating the earring into two Art objects, one representing the back half of the hoop and another for the front half of the hoop, the single earring Feature can be both in front of and behind the ear Art using separate zIndex values for both Art objects (to be both above and below the zIndex of the ear Art).
+
+{{{
+<Art name="Ear" src="ear.jpg" zIndex="2" />
+<Art name="Hoop_Earring" />
+	<Art src="hoopFront.jpg" zIndex="3" />
+	<Art src="hoopBack.jpg" zIndex="1" />
+</Art>
+}}}
+
+=== Styles ===
+
+Art styles allow different Art objects to be used in Feature rendering based on the specified style of a Feature.  Art.style and Feature.artStyle work hand in hand to determine which Art objects within a container Art is rendered.
+
+A style is itself nothing more than a name.  When a Feature is rendered, the string specified in Feature.artStyle is checked against Art.style of all the Art objects' it references.  Those that do not match are not drawn.  By default both Feature.artStyle and Art.style are null so all Art is drawn.
+
+
+== Where to go from here ==
+  * [AboutFeatures]
+  * [AboutXMLParsing]
+  * [AboutLibraries]
+  * [AboutColors]
+  * [AboutAdjusts]
+  * [AboutBehaviors]

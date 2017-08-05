@@ -1,0 +1,66 @@
+#summary Instructions for downloading and installing Avatar Core
+#labels Phase-Deploy,Phase-Requirements
+
+Avatar Core is a framework made up of a collection of source code in the form of ActionScript 3.0 classes.  To use these classes they must be saved, with their directory structure intact, to a location on your hard drive.  Your ActionScript compiler (Flex SDK, Flash Professional, etc.) would then need to be directed to find these classes by adding their save location to the compiler's class or source path (see below). 
+
+Avatar Core, at this time, is not available as a SWC.
+
+
+== Download == 
+
+To download the Avatar Core, classes you have two options:
+  * Sync with the svn repository
+  * Download the sample application with the framework included
+  * Download the framework SWC from the repository
+  
+==== Via SVN ====
+
+To obtain the framework through SVN, you will need an SVN client (program).  Once you have an SVN client up and running, follow the instructions found on the [http://code.google.com/p/avatarcore/source/checkout Source section] (additional information about obtaining a SVN client can be found there).
+
+==== Via Sample Download ====
+
+In the [http://code.google.com/p/avatarcore/downloads/list Downloads section], you will find a zip file containing a simple sample application that includes the full framework source.  This file gives you a direct means by which you can download the entire framework at once. However, this file is not guaranteed to be as up to date as the SVN repository.
+
+==== Via SWC ====
+
+SWCs are pre-compiled, self-contained libraries. With one file, you'll have the entire framework to use.  The SWC is available in the SVN repository but can be acquired without a SVN client. To do so:
+  # Go to the [http://code.google.com/p/avatarcore/source/checkout Source section]
+  # Click on the "Browse" link
+  # Navigate to: svn > trunk > as3 > lib
+  # Click on the avatarcore.swc file name
+  # On the right, select "View raw file"
+You should be prompted to download the SWC file.
+
+== Requirements ==
+
+The only requirement for the Avatar Core framework is the ability to compile ActionScript 3.0 and run Adobe Flash Player SWFs in your destination environment using Flash Player 9 or greater.  Depending on your compiler or authoring tool, there may be some additional setup needed to allow your tool to find and use the Avatar Core framework.  Note: some tools make distinctions between source code and library SWCs, so if given the option of selecting a "source" path or "library" path, you would set the source path for source code and library path for a SWC if you are using one.  
+
+==== Setting up Flash CS4 ====
+
+After you create a new ActionScript 3.0 FLA for a project that is to use Avatar Core, take the following steps to reference the framework:
+
+  # Select `File > Publish Settings...`
+  # Click on the `Flash` tab
+  # Click on the `Settings...` button next to `Script: ActionScript 3.0`
+  # Under `Source path` click on the _folder_ icon and browse for the directory where the Avatar Core framework was saved (the directory containing the "com" folder) or optionally click on the _+_ icon and type the path in the resulting field
+  # Click OK
+  # Click OK
+
+==== Setting up Flash Builder ====
+
+After creating a new project in Flash Builder (previously known as Flex Builder) that is to use Avatar Core, take the following steps to reference the framework:
+
+  # Select `Project > Properties...`
+  # Select `Flex Build Path` from the selection on the left
+  # Under `Source path` click on the `Add Folder...` button
+  # Browse for the directory where the Avatar Core framework was saved (the directory containing the "com" folder) or optionally type the path in the Add Folder text field field
+  # Click OK
+  # Click OK
+
+==== MXMLC or Other Compilers ====
+
+For other compilers, you need to make sure the directory where the Avatar Core framework was saved (the directory containing the "com" folder) is specified in the compilers classpath or source path.  For MXMLC (Windows), for example:
+{{{
+mxmlc Example.as -compiler.source-path "C:\libraries\avatarcore\"
+}}}
+This can also be set through the related .project file for MXMLC.

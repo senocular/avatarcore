@@ -1,0 +1,147 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../override.css" type="text/css"><meta name="keywords" content="FeatureBase,com.myavatareditor.avatarcore.FeatureBase,CURRENT_VERSION,LIBRARY_CHANGED,REBUILD,X_AXIS,Y_AXIS,a,aM,adjust,adjustName,adjustSet,art,artName,artSet,artStyle,autoRedraw,avatar,axis,b,bM,baseAdjust,behaviors,collection,collection,color,colorName,colorSet,colorize,colorize,defaultAdjust,defaultArt,defaultColor,defaultName,defaultStyleName,definition,flipX,flipY,g,gM,itemCount,itemCount,library,library,libraryName,max,meta,meta,min,name,name,name,name,name,name,name,name,name,nameKey,parent,parentCount,parentName,parentName,r,rM,requireUniqueNames,rotation,rotation,scale,scale,scaleX,scaleX,scaleY,scaleY,smoothing,smoothing,span,src,stepSpan,steps,style,suppressDraw,suppressEvents,suppressEvents,thumbnail,thumbnail,x,x,x,y,y,y,zIndex,zIndex,add,addItem,addItem,addItem,addItem,addItem,addItem,addItem,applyArtSpriteBehavior,applyArtSpriteParentTransform,assignDefaults,clamp,clearCollection,clearCollection,clone,clone,clone,clone,clone,clone,clone,clone,clone,clone,clone,clone,clone,clone,clone,clone,clone,collectionItemExists,collectionItemExists,consolidate,consolidateFeatures,copyCollectionFrom,copyCollectionFrom,copyValue,dispatchEvent,dispatchEvent,drawArtSprite,drawArtSprite,drawArtSprite,drawArtSprite,getArtSprites,getArtSprites,getArtSprites,getArtSprites,getConcatenatedParentMatrix,getDefaultPropertiesInXML,getDefaultPropertiesInXML,getDefaultPropertiesInXML,getDefaultPropertiesInXML,getDefaultPropertiesInXML,getDefaultPropertiesInXML,getItemByName,getItemByName,getItemsByType,getItemsByType,getMatrix,getObjectAsXML,getObjectAsXML,getObjectAsXML,getObjectAsXML,getObjectAsXML,getPropertiesAsAttributesInXML,getPropertiesAsAttributesInXML,getPropertiesAsAttributesInXML,getPropertiesAsAttributesInXML,getPropertiesAsAttributesInXML,getPropertiesAsAttributesInXML,getPropertiesAsAttributesInXML,getPropertiesAsAttributesInXML,getPropertiesIgnoredByXML,getPropertiesIgnoredByXML,getPropertiesIgnoredByXML,getPropertiesIgnoredByXML,getPropertiesIgnoredByXML,getPropertiesIgnoredByXML,getPropertiesIgnoredByXML,getPropertiesIgnoredByXML,getRenderedAdjust,getRenderedArt,getRenderedArtStyle,getRenderedBehaviors,getRenderedColor,load,normalize,parse,percentAt,rebuild,redraw,redraw,redraw,redraw,removeItem,removeItem,removeItem,removeItem,removeItemByName,removeItemByName,setArtSpriteColor,setArtSpriteMatrix,stepIndex,stepValue,subtract,toString,toString,toString,toString,toString,toString,updateParentHierarchy,valueAt,valueAtStepIndex"><title>com.myavatareditor.avatarcore.FeatureBase</title></head><body><script language="javascript" type="text/javascript" src="../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'FeatureBase - Avatar Core API Documentation';
+				var baseRef = '../../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">Avatar Core API Documentation</td><td class="titleTableTopNav" align="right"><a href="../../../package-summary.html" onclick="loadClassListFrame('../../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../../class-summary.html" onclick="loadClassListFrame('../../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../../all-index-A.html" onclick="loadClassListFrame('../../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../../index.html?com/myavatareditor/avatarcore/FeatureBase.html&amp;com/myavatareditor/avatarcore/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../../images/logo.jpg" class="logoImage" alt=" Adobe Logo " title=" Adobe Logo "></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">FeatureBase</td><td class="titleTableSubNav" id="subNav" align="right"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("FeatureBase"); titleBar_setSubNav(false,true,false	,false,false,false,true,false,false	,false,false,false,false,false);}	
+				-->
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">com.myavatareditor.avatarcore</a></td></tr><tr><td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  FeatureBase</td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">FeatureBase  <img src="../../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> Object</td></tr><tr><td class="classHeaderTableLabel">Implements</td><td> <a href="../../../com/myavatareditor/avatarcore/xml/IXMLWritable.html">IXMLWritable</a>,  <a href="../../../com/myavatareditor/avatarcore/IClonable.html">IClonable</a></td></tr><tr><td class="classHeaderTableLabel">Subclasses</td><td> <a href="../../../com/myavatareditor/avatarcore/Feature.html">Feature</a>,  <a href="../../../com/myavatareditor/avatarcore/FeatureDefinition.html">FeatureDefinition</a></td></tr></table><p></p><p></p><p></p>
+	 Base class for Feature and FeatureDefinition defining members
+	 shared between both of those classes.
+	 <p></p><br/><hr></div><a name="propertySummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Properties</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#autoRedraw" class="signatureLink">autoRedraw</a> : Boolean<div class="summaryTableDescription">
+		 When true, redraw() is automatically called when properties
+		 are set on this instance.</div></td><td class="summaryTableOwnerCol">FeatureBase</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#baseAdjust" class="signatureLink">baseAdjust</a> : <a href="../../../com/myavatareditor/avatarcore/Adjust.html">Adjust</a><div class="summaryTableDescription">
+		 Base adjustment on top of which other adjustments are applied.</div></td><td class="summaryTableOwnerCol">FeatureBase</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#behaviors" class="signatureLink">behaviors</a> : <a href="../../../com/myavatareditor/avatarcore/Collection.html">Collection</a><div class="summaryTableDescription">
+		 A collection of custom behaviors that are used to help
+		 determine the final render of an avatar feature.</div></td><td class="summaryTableOwnerCol">FeatureBase</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#meta" class="signatureLink">meta</a> : Object<div class="summaryTableDescription">
+		 Generic object for storing custom data (metadata).</div></td><td class="summaryTableOwnerCol">FeatureBase</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#name" class="signatureLink">name</a> : String<div class="summaryTableDescription">
+		 Identifies the feature object by name.</div></td><td class="summaryTableOwnerCol">FeatureBase</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#parentName" class="signatureLink">parentName</a> : String<div class="summaryTableDescription">
+		 Name of the parent feature from which this feature
+		 inherits adjustments such as position, scale and
+		 rotation.</div></td><td class="summaryTableOwnerCol">FeatureBase</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#thumbnail" class="signatureLink">thumbnail</a> : String<div class="summaryTableDescription">
+		 The source of the thumbnail to be used for previewing the
+		 Feature for the user.</div></td><td class="summaryTableOwnerCol">FeatureBase</td></tr></table></div><a name="protectedPropertySummary"></a><div class="summarySection"><div class="summaryTableTitle">Protected Properties</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProtectedProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#suppressDraw" class="signatureLink">suppressDraw</a> : Boolean = false<div class="summaryTableDescription"></div></td><td class="summaryTableOwnerCol">FeatureBase</td></tr></table></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#FeatureBase()" class="signatureLink">FeatureBase</a>(name:String = null)</div><div class="summaryTableDescription">
+		 Constructor for FeatureBase.</div></td><td class="summaryTableOwnerCol">FeatureBase</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#clone()" class="signatureLink">clone</a>(copyInto:Object = null):Object</div><div class="summaryTableDescription">
+		 Creates a FeatureBase copy.</div></td><td class="summaryTableOwnerCol">FeatureBase</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getDefaultPropertiesInXML()" class="signatureLink">getDefaultPropertiesInXML</a>():Object</div><div class="summaryTableDescription">
+		 
+		 Specifies the default values of properties within an object.</div></td><td class="summaryTableOwnerCol">FeatureBase</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getObjectAsXML()" class="signatureLink">getObjectAsXML</a>():XML</div><div class="summaryTableDescription">
+		 
+		 Provides an XML representation of an object being written to XML.</div></td><td class="summaryTableOwnerCol">FeatureBase</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getPropertiesAsAttributesInXML()" class="signatureLink">getPropertiesAsAttributesInXML</a>():Object</div><div class="summaryTableDescription">
+		 
+		 Specifies which object properties are defined as attributes
+		 in XML.</div></td><td class="summaryTableOwnerCol">FeatureBase</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getPropertiesIgnoredByXML()" class="signatureLink">getPropertiesIgnoredByXML</a>():Object</div><div class="summaryTableDescription">
+		 
+		 Specifies which object properties are omitted from XML.</div></td><td class="summaryTableOwnerCol">FeatureBase</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#redraw()" class="signatureLink">redraw</a>(originalName:String = null):void</div><div class="summaryTableDescription">
+		 Overridden by subclasses to redraw the feature.</div></td><td class="summaryTableOwnerCol">FeatureBase</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#toString()" class="signatureLink">toString</a>():String</div><div class="summaryTableDescription"></div></td><td class="summaryTableOwnerCol">FeatureBase</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+										showHideInherited();
+										--></script><div class="MainContent"><div class="detailSectionHeader">Property Detail</div><a name="propertyDetail"></a><a name="autoRedraw"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">autoRedraw</td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>autoRedraw:Boolean</code>&nbsp;&nbsp;[read-write] <p></p><p></p><p>
+		 When true, redraw() is automatically called when properties
+		 are set on this instance.
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get autoRedraw():Boolean</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set autoRedraw(value:Boolean):void</code><br/></div><a name="propertyDetail"></a><a name="baseAdjust"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">baseAdjust</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>baseAdjust:<a href="../../../com/myavatareditor/avatarcore/Adjust.html">Adjust</a></code>&nbsp;&nbsp;[read-write] <p></p><p></p><p>
+		 Base adjustment on top of which other adjustments are applied.
+		 These are useful for starting adjustments for new features and
+		 to serve as an offset that a FeatureDefinition can apply to a
+		 feature's own adjust value.
+		 If both a feature and its definition specify a base ajustment,
+		 only the definition's base adjustment will be used.  Normally
+		 Feature.baseAdjust is not necessary. It is only really useful
+		 to help maintain parity with adjust combinations from feature 
+		 definitions. For example, when copying FeatureDefinition
+		 characteristics into Feature objects, you would want both the
+		 adjust and the baseAdjust values so that the combined adjust
+		 will be used for the avatar when a library and it's related
+		 definitions are not available.
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get baseAdjust():<a href="../../../com/myavatareditor/avatarcore/Adjust.html">Adjust</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set baseAdjust(value:<a href="../../../com/myavatareditor/avatarcore/Adjust.html">Adjust</a>):void</code><br/></div><a name="propertyDetail"></a><a name="behaviors"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">behaviors</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>behaviors:<a href="../../../com/myavatareditor/avatarcore/Collection.html">Collection</a></code>&nbsp;&nbsp;[read-write] <p></p><p></p><p>
+		 A collection of custom behaviors that are used to help
+		 determine the final render of an avatar feature.  Each
+		 behavior in this collection is used when drawing the feature's
+		 art, not just one as is the case with the Art, Color,
+		 and Adjust.
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get behaviors():<a href="../../../com/myavatareditor/avatarcore/Collection.html">Collection</a></code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set behaviors(value:<a href="../../../com/myavatareditor/avatarcore/Collection.html">Collection</a>):void</code><br/></div><a name="propertyDetail"></a><a name="meta"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">meta</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>meta:Object</code>&nbsp;&nbsp;[read-write] <p></p><p></p><p>
+		 Generic object for storing custom data (metadata). This
+		 can be, but doesn't have to be a Metadata instance. The
+		 advantage of using a Metadata instance is that it 
+		 implements IClonable and can be cloned.
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get meta():Object</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set meta(value:Object):void</code><br/></div><a name="propertyDetail"></a><a name="name"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">name</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>name:String</code>&nbsp;&nbsp;[read-write] <p></p><p></p><p>
+		 Identifies the feature object by name. Features in 
+		 Avatar objects will reference FeatureDefinition objects
+		 that share the same name.
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get name():String</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set name(value:String):void</code><br/></div><a name="propertyDetail"></a><a name="parentName"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">parentName</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>parentName:String</code>&nbsp;&nbsp;[read-write] <p></p><p></p><p>
+		 Name of the parent feature from which this feature
+		 inherits adjustments such as position, scale and
+		 rotation.
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get parentName():String</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set parentName(value:String):void</code><br/></div><a name="propertyDetail"></a><a name="suppressDraw"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">suppressDraw</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>protected var suppressDraw:Boolean = false</code><p></p></div><a name="propertyDetail"></a><a name="thumbnail"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">thumbnail</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>thumbnail:String</code>&nbsp;&nbsp;[read-write] <p></p><p></p><p>
+		 The source of the thumbnail to be used for previewing the
+		 Feature for the user. This can be either a class name or a
+		 URL referencing a loaded asset. Management of a thumbnail
+		 is handled independently by the developer; the framework does 
+		 not necessarily internally depend on or otherwise use this value.
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get thumbnail():String</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set thumbnail(value:String):void</code><br/></div><a name="constructorDetail"></a><div class="detailSectionHeader">Constructor Detail</div><a name="FeatureBase()"></a><a name="FeatureBase(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">FeatureBase</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td></tr></table><div class="detailBody"><code>public function FeatureBase(name:String = null)</code><p></p><p>
+		 Constructor for FeatureBase.  FeatureBase instances are not meant
+		 to be instantiated.  Rather, FeatureBase exists as a base class
+		 for the FeatureDefinition and Feature classes.
+		 </p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">name</span>:String</code> (default = <code>null</code>)<code></code></td></tr></table></div><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="clone()"></a><a name="clone(Object)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">clone</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function clone(copyInto:Object = null):Object</code><p></p><p></p><p>
+		 Creates a FeatureBase copy.
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">copyInto</span>:Object</code> (default = <code>null</code>)<code></code></td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Object</code> &mdash; A copy of this FeatureBase instance.
+		 </td></tr></table></div><a name="getDefaultPropertiesInXML()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getDefaultPropertiesInXML</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getDefaultPropertiesInXML():Object</code><p></p><p></p><p>
+		 
+		 Specifies the default values of properties within an object.
+		 When an object is being written to XML, if it's property
+		 values match the default values defined by this call for that
+		 property, that property will not be written to XML.  This 
+		 reduces unnecessary XML elements and attributes which would
+		 otherwise do nothing but specify a value which already exists
+		 by default.
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Object</code> &mdash; An object with name value pairs where the names
+		 are the names of the class members and the values are the
+		 default values of those members.
+		 </td></tr></table></div><a name="getObjectAsXML()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getObjectAsXML</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getObjectAsXML():XML</code><p></p><p></p><p>
+		 
+		 Provides an XML representation of an object being written to XML.  
+		 If the return value is null, the XML for the class instance
+		 is created automatically by the XMLDefinitionWriter class.
+		 At that point getPropertiesIgnoredByXML and
+		 getPropertiesAsAttributesInXML are used to drive that
+		 process.
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>XML</code> &mdash; An XML version of the class as it should be
+		 represented within XML produced by XMLDefinitionWriter, or
+		 null if XMLDefinitionWriter should write the XML itself.
+		 </td></tr></table></div><a name="getPropertiesAsAttributesInXML()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getPropertiesAsAttributesInXML</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getPropertiesAsAttributesInXML():Object</code><p></p><p></p><p>
+		 
+		 Specifies which object properties are defined as attributes
+		 in XML. If getObjectAsXML returns null, this method is used
+		 by XMLDefinitionWriter to get the class members of the
+		 object that are created as attributes.  By default, class
+		 members are written as child elements.  Members specified
+		 as attributes should contain primitive values such as
+		 numbers, strings, or booleans. The object returned
+		 by this method should contain the names (keys) of each
+		 member not to be written.  Their values can be anything
+		 but the value of 1 is typical.
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Object</code> &mdash; An object with name value pairs where the names
+		 are the names of the class members to be written as
+		 attributes.  For example {foo:1, bar:1} means that the foo
+		 and bar values of the respective instance will be written
+		 as attributes in the generated XML.
+		 </td></tr></table></div><a name="getPropertiesIgnoredByXML()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getPropertiesIgnoredByXML</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getPropertiesIgnoredByXML():Object</code><p></p><p></p><p>
+		 
+		 Specifies which object properties are omitted from XML.
+		 If getObjectAsXML returns null, this method is used by
+		 XMLDefinitionWriter to get the class members of the
+		 object that are not written to XML. The object returned
+		 by this method should contain the names (keys) of each
+		 member not to be written.  Their values can be anything
+		 but the value of 1 is typical.
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Object</code> &mdash; An object with name value pairs where the names
+		 are the names of the class members not to be written to
+		 XML. For example {foo:1, bar:1} means that the foo and bar
+		 values of the respective instance will not be written to
+		 XML.
+		 </td></tr></table></div><a name="redraw()"></a><a name="redraw(String)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">redraw</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function redraw(originalName:String = null):void</code><p></p><p></p><p>
+		 Overridden by subclasses to redraw the feature.
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">originalName</span>:String</code> (default = <code>null</code>)<code></code></td></tr></table></p></div><a name="toString()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">toString</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function toString():String</code><p></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code></td></tr></table></div><br/><br/><hr><br/><p></p><center class="copyright"><footer></footer><br/>Sun Feb 7 2010, 10:25 PM -08:00  </center></div></body></html><!--<br/>Sun Feb 7 2010, 10:25 PM -08:00  -->

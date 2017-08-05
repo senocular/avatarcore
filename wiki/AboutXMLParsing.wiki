@@ -1,0 +1,130 @@
+#summary Learn more about XML parsing in Avatar Core.
+#labels Phase-Implementation
+_(Last updated for ver 0.2.0)_
+
+XML is a big part of the Avatar Core framework. It allows avatar viewer and editor client applications to be completely separated from the avatar data.  This includes both avatars as well as the libraries of items they have to select from.  Understanding how XML is handled in the framework will make it easier to generate the XML necessary for a successful Avatar Core-based application.
+
+API: [http://www.myavatareditor.com/avatarcore/docs/index.html?com/myavatareditor/avatarcore/xml/package-detail.html&com/myavatareditor/avatarcore/xml/class-list.html XML Classes]
+
+*In This Document:*
+<wiki:toc />
+
+== XML Schema ==
+
+The schema (a machine-readable document describing the structure of an XML document) for XML used within Avatar core is... there is no schema.  XML within Avatar Core is loosely defined and dynamically translated into a respective object definition at runtime.  The format of the XML depends entirely on the object definitions available within your application.
+
+
+== XML Reading ==
+
+XML is read, or parsed, by an instance of XMLDefinitionParser.  XMLDefinitionParser.parse() will generate a new object based on the definition provided in the XML being parsed.  The following example creates a new Object instance.
+
+{{{
+var xml:XML = <Object />;
+var xmlParser:XMLDefinitionParser = new XMLDefinitionParser();
+trace(xmlParser.parse(xml)); // [object Object]
+}}}
+
+Namespaces are used for specifying packages. Attributes and child elements within the XML correlate to the class members.  
+
+{{{
+var xml:XML = 
+}}}
+{{{
+	<Sprite xmlns="flash.display" x="10" y="20">
+		<scrollRect>
+			<Rectangle xmlns="flash.geom" x="25" y="25" width="50" height="50" />
+		</scrollRect>
+	</Sprite>;
+}}}
+{{{	
+var xmlParser:XMLDefinitionParser = new XMLDefinitionParser();
+var sprite:Sprite = xmlParser.parse(xml) as Sprite;
+
+trace(sprite.x, sprite.y); // 10 20
+trace(sprite.scrollRect); // (x=25, y=25, w=50, h=50)
+}}}
+
+There are some limitations to object creation in this manner.  For one, all objects are created with no constructor arguments.  If constructor arguments are required, object instantiation will fail.  Dynamic properties are also not supported.  If an object's class doesn't define a property, a property by that name will be ignored in XML.  For more information about the rules used for parsing, see below.
+
+=== Core XML Parsing Rules ===
+
+  * The root node of an XML document must define a new object
+  * XML element names specify either a class name or a property name
+  * If an element name specifies a class:
+    * The element name should equal the class name
+    * The class should be able to be instantiated through use of the `new` keyword with no required constructor arguments
+    * The XML namespace should match the class's package path
+  * If an element name matches a property name:
+    * A single object-defining child node of the element can be used to define a new object value of the property
+    * Without a child node, if the property does not exist, one will be created based on the type associated with the object's property in the object's class definition
+  * Attributes are copied into object properties
+  * Primitive values are automatically converted from the XML string values based on the type associated with the object's property in the object's class definition
+
+It is important to make sure definitions exist for them to be generated through XML. If a class is defined solely in XML, if not native to the language, they may need to be used somewhere in code to make sure they've been compiled into the client.
+
+{{{
+var xml:XML = <Avatar xmlns="com.myavatareditor.avatarcore" />;
+var xmlParser:XMLDefinitionParser = new XMLDefinitionParser();
+trace(xmlParser.parse(xml)); // null
+}}}
+corrected by:
+{{{
+Avatar;
+var xml:XML = <Avatar xmlns="com.myavatareditor.avatarcore" />;
+var xmlParser:XMLDefinitionParser = new XMLDefinitionParser();
+trace(xmlParser.parse(xml)); // [Avatar name:null]
+}}}
+
+
+
+=== Avatar Core Parsing ===
+
+XMLDefinitionParser has some Avatar Core specific functionality.  Namely child nodes that specify objects and do not correlate to a property of the object represented by the parent element are created as objects that are added to the collection of that parent object.  For example, the following:
+
+{{{
+<Avatar xmlns="com.myavatareditor.avatarcore">
+	<Feature />
+	<Feature />
+	<Feature />
+</Avatar>;
+}}}
+is the same as
+{{{
+var avatar:Avatar = new Avatar();
+avatar.addItem(new Feature());
+avatar.addItem(new Feature());
+avatar.addItem(new Feature());
+}}}
+
+All of the objects you should need to create through XML for Avatar Core also exist within the com.myavatareditor.avatarcore package meaning that the XML namespace conveniently only ever needs to be defined once in the root node.
+
+
+== XML Writing ==
+
+The XMLDefinitionWriter class is used to generate XML.  XMLDefinitionWriter.write accepts an object and returns XML that describes the object.  Similar rules used by XMLDefinitionParser are used by XMLDefinitionWriter so some objects will not work well being written to XML, such as objects with dynamic properties.
+
+{{{
+var avatar:Avatar = new Avatar();
+var feature:Feature = new Feature();
+feature.name = "foo";
+avatar.addItem(feature);
+
+var xmlWriter:XMLDefinitionWriter = new XMLDefinitionWriter();
+trace(xmlWriter.write(avatar));
+/*
+<Avatar xmlns="com.myavatareditor.avatarcore">
+  <Feature name="foo"/>
+</Avatar>
+*/
+}}}
+
+To provide more control over how an object is converted to XML by XMLDefinitionWriter, a class can implement the IXMLWritable interface.  It includes methods used by XMLDefinitionWriter to generate XML.
+
+
+== Where to go from here ==
+  * [AboutFeatures]
+  * [AboutArt]
+  * [AboutLibraries]
+  * [AboutColors]
+  * [AboutAdjusts]
+  * [AboutBehaviors]

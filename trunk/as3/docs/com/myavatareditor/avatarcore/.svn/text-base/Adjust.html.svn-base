@@ -1,0 +1,169 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../override.css" type="text/css"><meta name="keywords" content="Adjust,com.myavatareditor.avatarcore.Adjust,CURRENT_VERSION,LIBRARY_CHANGED,REBUILD,X_AXIS,Y_AXIS,a,aM,adjust,adjustName,adjustSet,art,artName,artSet,artStyle,autoRedraw,avatar,axis,b,bM,baseAdjust,behaviors,collection,collection,color,colorName,colorSet,colorize,colorize,defaultAdjust,defaultArt,defaultColor,defaultName,defaultStyleName,definition,flipX,flipY,g,gM,itemCount,itemCount,library,library,libraryName,max,meta,meta,min,name,name,name,name,name,name,name,name,name,nameKey,parent,parentCount,parentName,parentName,r,rM,requireUniqueNames,rotation,rotation,scale,scale,scaleX,scaleX,scaleY,scaleY,smoothing,smoothing,span,src,stepSpan,steps,style,suppressDraw,suppressEvents,suppressEvents,thumbnail,thumbnail,x,x,x,y,y,y,zIndex,zIndex,add,addItem,addItem,addItem,addItem,addItem,addItem,addItem,applyArtSpriteBehavior,applyArtSpriteParentTransform,assignDefaults,clamp,clearCollection,clearCollection,clone,clone,clone,clone,clone,clone,clone,clone,clone,clone,clone,clone,clone,clone,clone,clone,clone,collectionItemExists,collectionItemExists,consolidate,consolidateFeatures,copyCollectionFrom,copyCollectionFrom,copyValue,dispatchEvent,dispatchEvent,drawArtSprite,drawArtSprite,drawArtSprite,drawArtSprite,getArtSprites,getArtSprites,getArtSprites,getArtSprites,getConcatenatedParentMatrix,getDefaultPropertiesInXML,getDefaultPropertiesInXML,getDefaultPropertiesInXML,getDefaultPropertiesInXML,getDefaultPropertiesInXML,getDefaultPropertiesInXML,getItemByName,getItemByName,getItemsByType,getItemsByType,getMatrix,getObjectAsXML,getObjectAsXML,getObjectAsXML,getObjectAsXML,getObjectAsXML,getPropertiesAsAttributesInXML,getPropertiesAsAttributesInXML,getPropertiesAsAttributesInXML,getPropertiesAsAttributesInXML,getPropertiesAsAttributesInXML,getPropertiesAsAttributesInXML,getPropertiesAsAttributesInXML,getPropertiesAsAttributesInXML,getPropertiesIgnoredByXML,getPropertiesIgnoredByXML,getPropertiesIgnoredByXML,getPropertiesIgnoredByXML,getPropertiesIgnoredByXML,getPropertiesIgnoredByXML,getPropertiesIgnoredByXML,getPropertiesIgnoredByXML,getRenderedAdjust,getRenderedArt,getRenderedArtStyle,getRenderedBehaviors,getRenderedColor,load,normalize,parse,percentAt,rebuild,redraw,redraw,redraw,redraw,removeItem,removeItem,removeItem,removeItem,removeItemByName,removeItemByName,setArtSpriteColor,setArtSpriteMatrix,stepIndex,stepValue,subtract,toString,toString,toString,toString,toString,toString,updateParentHierarchy,valueAt,valueAtStepIndex"><title>com.myavatareditor.avatarcore.Adjust</title></head><body><script language="javascript" type="text/javascript" src="../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'Adjust - Avatar Core API Documentation';
+				var baseRef = '../../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">Avatar Core API Documentation</td><td class="titleTableTopNav" align="right"><a href="../../../package-summary.html" onclick="loadClassListFrame('../../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../../class-summary.html" onclick="loadClassListFrame('../../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../../all-index-A.html" onclick="loadClassListFrame('../../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../../index.html?com/myavatareditor/avatarcore/Adjust.html&amp;com/myavatareditor/avatarcore/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../../images/logo.jpg" class="logoImage" alt=" Adobe Logo " title=" Adobe Logo "></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">Adjust</td><td class="titleTableSubNav" id="subNav" align="right"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Adjust"); titleBar_setSubNav(false,true,false	,false,false,false,true,false,false	,false,false,false,false,false);}	
+				-->
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">com.myavatareditor.avatarcore</a></td></tr><tr><td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  Adjust</td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">Adjust  <img src="../../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> Object</td></tr><tr><td class="classHeaderTableLabel">Implements</td><td> <a href="../../../com/myavatareditor/avatarcore/xml/IXMLWritable.html">IXMLWritable</a>,  <a href="../../../com/myavatareditor/avatarcore/IClonable.html">IClonable</a></td></tr></table><p></p><p></p><p></p>
+	 Represents a postion, scale, and rotation adjustation that is applied to
+	 the Art of an avatar feature. Adjusts are very similar to the Matrix object,
+	 ultimately being used to alter the DisplayObject.transform.matrix of ArtSprite
+	 instances, but their behavior is slightly different.  Adjusts, for example do 
+	 not allow changes to object skew or distortion outside of position, scale, and 
+	 rotation. For negative scaling (horizontal or vertical flipping), it is also 
+	 recommended that the flipX and flipY properties be used instead of negative
+	 values for scaleX and scaleY.
+	 <p>
+	 The parenting of Features relates directly to the application of changes defined
+	 by Adjusts.  When one Feature is the child of another Feature through parenting
+	 the child Feature's Adjust inherits certain properties from the parent.  These 
+	 properties include position and rotation, but not scale. Parent scaling does
+	 affect child positioning, but it does not affect child scaling.  All ArtSprite
+	 instances are direct DisplayObject children of their container AvatarDisplay 
+	 parent so these transformations are handled independantly of the standard display
+	 list transformations (where scale is inherited).
+	 </p>
+	           <p></p><br/><hr></div><a name="propertySummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Properties</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#flipX" class="signatureLink">flipX</a> : Boolean = false<div class="summaryTableDescription">
+		 When true, flips an art sprite's graphics within the x axis.</div></td><td class="summaryTableOwnerCol">Adjust</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#flipY" class="signatureLink">flipY</a> : Boolean = false<div class="summaryTableDescription">
+		 When true, flips an art sprite's graphics within the y axis.</div></td><td class="summaryTableOwnerCol">Adjust</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#name" class="signatureLink">name</a> : String<div class="summaryTableDescription">
+		 Name identifier for the Adjust object.</div></td><td class="summaryTableOwnerCol">Adjust</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#rotation" class="signatureLink">rotation</a> : Number = 0<div class="summaryTableDescription">
+		 Rotation in degrees to be applied to an art sprite.</div></td><td class="summaryTableOwnerCol">Adjust</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#scale" class="signatureLink">scale</a> : Number<div class="summaryTableDescription">
+		 The average scale of the adjust.</div></td><td class="summaryTableOwnerCol">Adjust</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#scaleX" class="signatureLink">scaleX</a> : Number = 1<div class="summaryTableDescription">
+		 Horizontal scale multiplier to be applied to an art sprite.</div></td><td class="summaryTableOwnerCol">Adjust</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#scaleY" class="signatureLink">scaleY</a> : Number = 1<div class="summaryTableDescription">
+		 Vertical scale multiplier to be applied to an art sprite.</div></td><td class="summaryTableOwnerCol">Adjust</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#x" class="signatureLink">x</a> : Number = 0<div class="summaryTableDescription">
+		 Horizontal offset to be applied to an art sprite.</div></td><td class="summaryTableOwnerCol">Adjust</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#y" class="signatureLink">y</a> : Number = 0<div class="summaryTableDescription">
+		 Vertical offset to be applied to an art sprite.</div></td><td class="summaryTableOwnerCol">Adjust</td></tr></table></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#Adjust()" class="signatureLink">Adjust</a>(name:String = null, x:Number = 0, y:Number = 0, scaleX:Number = 1, scaleY:Number = 1, rotation:Number = 0)</div><div class="summaryTableDescription">
+		 Constructor for creating new Adjust instances.</div></td><td class="summaryTableOwnerCol">Adjust</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#add()" class="signatureLink">add</a>(adjust:<a href="../../../com/myavatareditor/avatarcore/Adjust.html">Adjust</a>):void</div><div class="summaryTableDescription">
+		 Adds another adjust to this one.</div></td><td class="summaryTableOwnerCol">Adjust</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#clone()" class="signatureLink">clone</a>(copyInto:Object = null):Object</div><div class="summaryTableDescription">
+		 Creates and returns a copy of the Adjust object.</div></td><td class="summaryTableOwnerCol">Adjust</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getDefaultPropertiesInXML()" class="signatureLink">getDefaultPropertiesInXML</a>():Object</div><div class="summaryTableDescription">
+		 
+		 Specifies the default values of properties within an object.</div></td><td class="summaryTableOwnerCol">Adjust</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getMatrix()" class="signatureLink">getMatrix</a>():Matrix</div><div class="summaryTableDescription">
+		 Returns a matrix representation of this adjustation
+		 that can be applied to graphics.</div></td><td class="summaryTableOwnerCol">Adjust</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getObjectAsXML()" class="signatureLink">getObjectAsXML</a>():XML</div><div class="summaryTableDescription">
+		 
+		 Provides an XML representation of an object being written to XML.</div></td><td class="summaryTableOwnerCol">Adjust</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getPropertiesAsAttributesInXML()" class="signatureLink">getPropertiesAsAttributesInXML</a>():Object</div><div class="summaryTableDescription">
+		 
+		 Specifies which object properties are defined as attributes
+		 in XML.</div></td><td class="summaryTableOwnerCol">Adjust</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#getPropertiesIgnoredByXML()" class="signatureLink">getPropertiesIgnoredByXML</a>():Object</div><div class="summaryTableDescription">
+		 
+		 Specifies which object properties are omitted from XML.</div></td><td class="summaryTableOwnerCol">Adjust</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#subtract()" class="signatureLink">subtract</a>(adjust:<a href="../../../com/myavatareditor/avatarcore/Adjust.html">Adjust</a>):void</div><div class="summaryTableDescription">
+		 Subtracts another adjust from this one.</div></td><td class="summaryTableOwnerCol">Adjust</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#toString()" class="signatureLink">toString</a>():String</div><div class="summaryTableDescription">
+		 </div></td><td class="summaryTableOwnerCol">Adjust</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+										showHideInherited();
+										--></script><div class="MainContent"><div class="detailSectionHeader">Property Detail</div><a name="propertyDetail"></a><a name="flipX"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">flipX</td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>public var flipX:Boolean = false</code><p></p><p></p><p>
+		 When true, flips an art sprite's graphics within the x axis.
+		 This is comparable to having a negative scaleX but allows
+		 constraints to be accurately applied to that value.
+		 </p></div><a name="propertyDetail"></a><a name="flipY"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">flipY</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var flipY:Boolean = false</code><p></p><p></p><p>
+		 When true, flips an art sprite's graphics within the y axis.
+		 This is comparable to having a negative scaleY but allows
+		 constraints to be accurately applied to that value.
+		 </p></div><a name="propertyDetail"></a><a name="name"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">name</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>name:String</code>&nbsp;&nbsp;[read-write] <p></p><p></p><p>
+		 Name identifier for the Adjust object.
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get name():String</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set name(value:String):void</code><br/></div><a name="propertyDetail"></a><a name="rotation"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">rotation</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var rotation:Number = 0</code><p></p><p></p><p>
+		 Rotation in degrees to be applied to an art sprite.
+		 </p></div><a name="propertyDetail"></a><a name="scale"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">scale</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>scale:Number</code>&nbsp;&nbsp;[read-write] <p></p><p></p><p>
+		 The average scale of the adjust. This is determined
+		 dynamically to be the avarage value of scaleX and scaleY.
+		 When setting scale, both scaleX and scaleY are set to 
+		 the value provided.
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get scale():Number</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set scale(value:Number):void</code><br/></div><a name="propertyDetail"></a><a name="scaleX"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">scaleX</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var scaleX:Number = 1</code><p></p><p></p><p>
+		 Horizontal scale multiplier to be applied to an art sprite.
+		 This accounts for scaling in both the x axis.
+		 </p></div><a name="propertyDetail"></a><a name="scaleY"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">scaleY</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var scaleY:Number = 1</code><p></p><p></p><p>
+		 Vertical scale multiplier to be applied to an art sprite.
+		 This accounts for scaling in both the y axis.
+		 </p></div><a name="propertyDetail"></a><a name="x"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">x</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var x:Number = 0</code><p></p><p></p><p>
+		 Horizontal offset to be applied to an art sprite.
+		 </p></div><a name="propertyDetail"></a><a name="y"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">y</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>public var y:Number = 0</code><p></p><p></p><p>
+		 Vertical offset to be applied to an art sprite.
+		 </p></div><a name="constructorDetail"></a><div class="detailSectionHeader">Constructor Detail</div><a name="Adjust()"></a><a name="Adjust(String,Number,Number,Number,Number,Number)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">Adjust</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td></tr></table><div class="detailBody"><code>public function Adjust(name:String = null, x:Number = 0, y:Number = 0, scaleX:Number = 1, scaleY:Number = 1, rotation:Number = 0)</code><p></p><p>
+		 Constructor for creating new Adjust instances.
+		 </p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">name</span>:String</code> (default = <code>null</code>)<code></code> &mdash; The starting x, or horizontal position, value.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">x</span>:Number</code> (default = <code>0</code>)<code></code> &mdash; The starting y, or vertical position, value.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">y</span>:Number</code> (default = <code>0</code>)<code></code> &mdash; The starting scaleX value.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">scaleX</span>:Number</code> (default = <code>1</code>)<code></code> &mdash; The starting scaleY value.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">scaleY</span>:Number</code> (default = <code>1</code>)<code></code> &mdash; The starting rotation value.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">rotation</span>:Number</code> (default = <code>0</code>)<code></code></td></tr></table></div><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="add()"></a><a name="add(com.myavatareditor.avatarcore.Adjust)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">add</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function add(adjust:<a href="../../../com/myavatareditor/avatarcore/Adjust.html">Adjust</a>):void</code><p></p><p></p><p>
+		 Adds another adjust to this one.  This is used to combine
+		 a base adjust with a feature adjust. All values except
+		 scale are added. Scale values are multiplied. For flip values
+		 the value is toggled if adjust being added is flipped.
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">adjust</span>:<a href="../../../com/myavatareditor/avatarcore/Adjust.html">Adjust</a></code> &mdash; The Adjust whose properties
+		 should be added to this Adjust.
+		 </td></tr></table></p></div><a name="clone()"></a><a name="clone(Object)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">clone</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function clone(copyInto:Object = null):Object</code><p></p><p></p><p>
+		 Creates and returns a copy of the Adjust object.
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">copyInto</span>:Object</code> (default = <code>null</code>)<code></code></td></tr></table></p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Object</code> &mdash; A copy of this Adjust object.
+		 </td></tr></table></div><a name="getDefaultPropertiesInXML()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getDefaultPropertiesInXML</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getDefaultPropertiesInXML():Object</code><p></p><p></p><p>
+		 
+		 Specifies the default values of properties within an object.
+		 When an object is being written to XML, if it's property
+		 values match the default values defined by this call for that
+		 property, that property will not be written to XML.  This 
+		 reduces unnecessary XML elements and attributes which would
+		 otherwise do nothing but specify a value which already exists
+		 by default.
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Object</code> &mdash; An object with name value pairs where the names
+		 are the names of the class members and the values are the
+		 default values of those members.
+		 </td></tr></table></div><a name="getMatrix()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getMatrix</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getMatrix():Matrix</code><p></p><p></p><p>
+		 Returns a matrix representation of this adjustation
+		 that can be applied to graphics.
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Matrix</code> &mdash; A matrix object with all of the characteristics
+		 of this adjust.
+		 </td></tr></table></div><a name="getObjectAsXML()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getObjectAsXML</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getObjectAsXML():XML</code><p></p><p></p><p>
+		 
+		 Provides an XML representation of an object being written to XML.  
+		 If the return value is null, the XML for the class instance
+		 is created automatically by the XMLDefinitionWriter class.
+		 At that point getPropertiesIgnoredByXML and
+		 getPropertiesAsAttributesInXML are used to drive that
+		 process.
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>XML</code> &mdash; An XML version of the class as it should be
+		 represented within XML produced by XMLDefinitionWriter, or
+		 null if XMLDefinitionWriter should write the XML itself.
+		 </td></tr></table></div><a name="getPropertiesAsAttributesInXML()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getPropertiesAsAttributesInXML</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getPropertiesAsAttributesInXML():Object</code><p></p><p></p><p>
+		 
+		 Specifies which object properties are defined as attributes
+		 in XML. If getObjectAsXML returns null, this method is used
+		 by XMLDefinitionWriter to get the class members of the
+		 object that are created as attributes.  By default, class
+		 members are written as child elements.  Members specified
+		 as attributes should contain primitive values such as
+		 numbers, strings, or booleans. The object returned
+		 by this method should contain the names (keys) of each
+		 member not to be written.  Their values can be anything
+		 but the value of 1 is typical.
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Object</code> &mdash; An object with name value pairs where the names
+		 are the names of the class members to be written as
+		 attributes.  For example {foo:1, bar:1} means that the foo
+		 and bar values of the respective instance will be written
+		 as attributes in the generated XML.
+		 </td></tr></table></div><a name="getPropertiesIgnoredByXML()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">getPropertiesIgnoredByXML</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function getPropertiesIgnoredByXML():Object</code><p></p><p></p><p>
+		 
+		 Specifies which object properties are omitted from XML.
+		 If getObjectAsXML returns null, this method is used by
+		 XMLDefinitionWriter to get the class members of the
+		 object that are not written to XML. The object returned
+		 by this method should contain the names (keys) of each
+		 member not to be written.  Their values can be anything
+		 but the value of 1 is typical.
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>Object</code> &mdash; An object with name value pairs where the names
+		 are the names of the class members not to be written to
+		 XML. For example {foo:1, bar:1} means that the foo and bar
+		 values of the respective instance will not be written to
+		 XML.
+		 </td></tr></table></div><a name="subtract()"></a><a name="subtract(com.myavatareditor.avatarcore.Adjust)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">subtract</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function subtract(adjust:<a href="../../../com/myavatareditor/avatarcore/Adjust.html">Adjust</a>):void</code><p></p><p></p><p>
+		 Subtracts another adjust from this one. All values except
+		 scale are subtracted. Scale values are divided. For flip values
+		 the value is toggled if adjust being added is flipped.
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">adjust</span>:<a href="../../../com/myavatareditor/avatarcore/Adjust.html">Adjust</a></code> &mdash; The Adjust whose properties
+		 should be subtracted from this Adjust.
+		 </td></tr></table></p></div><a name="toString()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">toString</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function toString():String</code><p></p><p></p><p>
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code></td></tr></table></div><br/><br/><hr><br/><p></p><center class="copyright"><footer></footer><br/>Sun Feb 7 2010, 10:25 PM -08:00  </center></div></body></html><!--<br/>Sun Feb 7 2010, 10:25 PM -08:00  -->

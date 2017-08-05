@@ -1,0 +1,423 @@
+﻿= Release Notes =
+
+Avatar Core Framework - a free framework for creating and displaying avatars.
+
+http://myavatareditor.com/avatarcore
+http://avatarcore.googlecode.com
+
+
+== Known issues ==
+
+- None.
+
+
+== Change List ==
+
+=== 0.5.5 (February 7, 2010) ===
+
+A set of small API changes and bug fixes.  Largest change includes the
+addition of clone() methods to many of the Avatar Core core classes.
+
+- Separated some drawArtSprite functionality into separate functions that
+  make it easier to intercept these operations with Feature subclasses
+  This new API consists of the protected Feature methods: 
+  setArtSpriteColor(), setArtSpriteMatrix(), applyArtSpriteBehavior(),
+  and applyArtSpriteParentTransform()
+- Added clone() methods to the Avatar, Feature, Library, FeatureDefinition, 
+  and Definitions classes.
+- Added IClonable interface for classes that implement clone()
+- The IBehavior interface no longer includes a clone method. Instead it
+  extends the new IClonable interface (the clone signature is slightly
+  different than the original)
+- Fixed some bugs with some existing implementations of clone()
+- Added Metadata class, a cloneable, generic object class
+- Added a meta property to the Collection class.
+- Added the axis parameter to the Mirror behavior constructor
+- Added the name property to the Mirror and Range classes
+- Added the name parameter to the Adjust, Art, Avatar, Color and Library
+  class constructors
+- Removed AvatarDisplay.ART_COMPLETE since it wasn't being used
+- Improved some documentation (such as documenting more events)
+- The artName, colorName, and adjustName properties on the Feature object
+  now work like the libraryName property on Avatar; they exist as 
+  independent values that will be overridden by the name properties of
+  their respective associated references if present (i.e. for artName, if
+  an Art value exists for the Feature, art.name will be used when finding a
+  reference in a respective FeatureDefinition).
+- The artName, colorName, and adjustName properties on the Feature object
+  are now written to XML generated for Feature objects.
+- Fixed issue where autoLoad was not being respected in SourceLoaderSprite
+- Removed (made private) updateAvatar/updateAvatars methods in the
+  Definitions class. To associate avatars with Library objects in a 
+  Definitions, simply add them to the Definitions with addItem()
+- Renamed Avatar.redrawFeatures to simply Avatar.redraw() to be more
+  consistent with other APIs
+- Renamed draw() in AvatarSprite and AvatarDisplay to redraw() to be more
+  consistent with other APIs
+- Feature.definition is now read-only and instead of being assigned a
+  value, now consists of a dynamic lookup of a respective FeatureDefinition
+  in the associated Avatar's library
+- Added FeatureBase.redraw(). This is called whenever a 
+  FeatureDefinition property is set and, as with Feature instances, translates
+  into a CHANGED event in a linked Library. The redraw() method for both
+  Feature and FeatureDefinition also now include an originalName property that
+  is included in FeatureEvents and FeatureDefinitionEvents to help identify
+  old references if the name changed.
+- Added FeatureBase.autoRedraw. When false, this will prevent automatic 
+  calls to FeatureDefinition.redraw(), Feature.redraw(), and 
+  Feature.avatar.updateParentHierarchy() during property sets
+- Feature defaults (from FeatureDefinition instances) are now assigned when a
+  Feature is added to an Avatar or when a Library is set for an Avatar
+- Added AvatarDisplay.updateFeatureArtByName()
+- Adjust add() and subtract() now affect flipX and flipY
+- Added X_AXIS and Y_AXIS constants to the Mirror behavior class
+- Included recursion safety in XMLDefinitionWriter
+
+=== 0.5.1 (September 15, 2009) ===
+
+- Additional error checking in Collection.copyCollectionFrom()
+- The parent hierarchy of an Avatar is automatically updated when setting 
+  Feature.parent
+
+=== 0.5.0 (September 10, 2009) ===
+
+A number of API additions, a few bug fixes, and some tightening up of
+some classes to provide better compatibility.
+
+- SourceLoaderSprite.src now returns the value it was assigned (was not the
+  case when the src included a frame; then the frame was stripped)
+- Added SourceLoaderSprite.srcURI to represent the src without a frame
+- Added a incrementMap parameter to Art.assignDefaults that allows zIndex
+  values for child Art instances to auto-increment based on the parent Art's
+  zIndex.  This happens on a per-style basis
+- Added Feature.getRenderedArtStyle()
+- Added Feature.getRenderedBehaviors()
+- Removed Feature constructor's definition parameter
+- Added for FeatureDefinition: defaultArt, defaultAdjust and defaultColor to
+  be copied into Features when assigned to a definition if the Feature has
+  no respective value already in place.
+- Added ArtSet.defaultStyleName
+- Added name parameter to FeatureBase constructor (along with Feature and
+  FeatureDefinition)
+- Moved Feature.thumbnail to FeatureBase.thumbnail
+- Reversed the order in which behaviors were called (now starting with the
+  first in the collection)
+- Modified Adjust.add/Adjust.subtract to respectively multiply and divide
+  scale values rather than add/subtract them. This is a bug fix for the use
+  of baseAdjust values
+- XMLDefinitionParser now correctly recognizes "*" as the default namespace
+  (an xmlns of "*" can be used to target classes not in a package)
+- XMLDefinitionParser now attempts to assign dynamic properties for instances
+  of dynamic classes where child node values are not present in the class's
+  own definition
+- Made a significant improvement in performance for XMLDefinitionParser.parse
+- Added meta property (Object) to FeatureBase for storing dynamic information
+  within a Feature or FeatureDefinition
+- Changed ref attribute used to specify object references in XML parsing to 
+  exist within the com.myavatareditor.avatarcore.xml namespace to help
+  prevent naming collisions
+- Range max now defaults to 0 making a generic Range instance constrictive
+- Added r,g,b,a,rM,gM,bM, and aM to Color as shortcut properties for 
+  the othe r*Multiplier and *Offset properties. This was designed specifically
+  to reduce space in Color representations in XML
+- Removed FEATURE_ and FEATURE_DEFINITION_ prefix from constants for
+  FeatureEvent and FeatureDefinition Event event types
+- Added SourceEvent for loading of source content
+- ArtSprite objects dispatch SourceEvent.COMPLETE instead of Event.COMPLETE 
+  when their content has loaded
+- A Viewport will listen for it's content's SourceEvent.COMPLETE and update
+  its display when that event is triggered
+- ThumbnailArtSprite now uses a generic "target" reference instead of a 
+  reference to an Art instance so that it can work with Feature and 
+  FeatureDefinition instances
+- Added FeatureDefinition.library linking a FeatureDefinition to its 
+  respective library. With this is the restriction that FeatureDefinition
+  objects can only exist within one library at a time
+- Added FeatureDefinition.redraw(). This works much like Feature.redraw()
+  does for Features in an Avatar.  FeatureDefinition.redraw will dispatch
+  an event from the library which will be picked up by avatars that are
+  linked to it which in turn will allow those avatars to redraw any
+  feature linked to the FeatureDefinition being redrawn.
+
+=== 0.2.1 (September 1, 2009) ===
+
+- Setting Feature.name and Feature.parentName now redraws (as was/is the
+  case with the other members in Feature)
+- Art.src can now reference Class or Function definitions. This does not apply
+  to XML since XML will always specify a string.  For Classes, an instance of
+  the class will be used for the src (as with a class name string) while 
+  function return values will be used when a function is specified
+- Added ICollection.itemCount
+- Added Mirror.axis for specifying which axis to mirror on
+- Added Range.valueAtStepIndex
+- Added Range.stepIndex
+- Added SourceLoaderSprite.load
+- Added an autoLoad parameter to the SourceLoaderSprite, ArtSprite and 
+  ThumbnailArtSprite constructors.  Referenced content won't be loaded into
+  the sprite unless this is true or SourceLoaderSprite.load is called.
+- SourceLoaderSprite (and ArtSprites, etc.) no longer loads their source 
+  content immediately upon setting the source (SourceLoaderSprite.src). This
+  corrected situation where Art was being loaded repeatedly and unnecessarily
+  every time an AvatarDisplay was being drawn
+
+=== 0.2.0 (August 28, 2009) ===
+
+There have been a number of new API changes, as well as a reworking
+of how parenting is handled.  The new approach allows Constrain behaviors
+to work better with parenting. In addition some rendering changes have
+been made that change the effects of parent transforms on their children.
+
+- Added Viewport.resetContent()
+- Added a padding parameter to Viewport.fitContent()
+- Added ThumbnailArtSprite class
+- Added SourceLoaderSprite class as a base class for ArtSprite and
+  ThumbnailArtSprite
+- Renamed AvatarArt to AvatarDisplay to prevent confusion with with the
+  Art/ArtSprite classes
+- ArtSprites no longer redraw themselves (i.e. their feature) when their
+  feature property is set. This was creating many more calls to draw() than
+  was necessary, though may require additional manual calls for updates
+- Scaling a parent feature no longer scales its children; child position,
+  however, is still affected by scale
+- Renamed Transform to Adjust to prevent confusion with flash.geom.Transform
+- Instead of mirroring features with a negative scale, flipX and flipY
+  properties have been added to the Adjust (Transform) class 
+- Fixed a bug in Adjust.add and Adjust.subtract where x and y were flipped
+- Renamed "update"-related API in Feature and Avatar to "redraw"
+- Changed parent-related API in Feature (removed getParentFeature, added
+  parent, [internal]parentCount, [internal]updateParent)
+- Features are no longer hidden if their parent cannot be found. They are
+  instead left visible and treated as though they have no parent
+- Added Feature.getConcatenatedParentMatrix()
+- Added Avatar.updateParentHierarchy(). This is called frequently through
+  other APIs but may be necessary to call to make sure the parent 
+  hierarchy of an avatar is accurate
+- Added getDefaultPropertiesInXML to IXMLWritable, helping to reduce the 
+  inclusion of default values in generated XML
+- Range class now has a steps property
+- Separated Constrain.position (Rect) to Constrain.x (Range) and 
+  Constrain.y (Range)
+- Removed Rect class (was only used by Constrain before)
+- Constrain uses its Ranges' steps, if provided, to apply stepping
+  to constrained values
+- Constrain is now applied to feature adjusts (transforms) rather than
+  directly to art sprites to allow child adjusts to honor the
+  constrain
+- Added Constrain.name, making it more convenient to access Constrain
+  behaviors in a feature
+- Other minor bug fixes
+
+=== 0.1.5 (May 25, 2009) ===
+
+Minor API changes, mostly to Definitions class.
+
+- Added xml parameter to Definitions constructor
+- Renamed Definitions.setXML() to parse()
+- Renamed Definitions.loadXML() to load()
+- Added Definitions.updateAvatar()
+- Added Definitions.updateAvatars()
+- Avatar.libraryName will return the name of any Library objects associated
+  with the avatar if available rather than the Avatar's own, internal
+  libraryName value
+- Changed a print WARNING to print NORMAL for features using a default
+  feature definition item (e.g. art.name not specified so first Art in a 
+  linked FeatureDefinition.artSet is used)
+
+=== 0.1.0 (May 5, 2009) ===
+
+This release is a quickfix for an outstanding issue related to content
+loading. It also signifies a change in version numbering, now using the
+minor version for new releases instead of just the build.
+
+- Fixed a bug preventing art referencing assets from an external source (not
+  in SWF library) from being displayed on the screen.
+
+=== 0.0.5 (May 3, 2009) ===
+
+This release mostly focused on exposing more of the API (such as getRendered*)
+to make it easier to develop custom behaviors for features. Additional methods
+and attention was also given to make avatar/feature updates easier.
+
+- Added frame support for art assets. Frames are specified by placing a hash
+  (#) and the frame identifier (number or label) at the end of the Art src
+  field, e.g. <Art src="eyes.swf#12" /> - goes to frame 12 in the eyes.swf
+  timeline when loaded in as an art asset
+- Added support for BitmapData class names in Art.src for bitmap images in
+  a Flash library
+- Smoothing for bitmaps can now be specified with Art.smoothing.
+- Added ArtSet.smoothing so child Art instances can inherit default smoothing
+- Added Feature.getRenderedArt() (existed but not exposed)
+- Added Feature.getRenderedColor() (existed but not exposed)
+- Added Feature.getRenderedTransform() (existed but not exposed)
+- Added Feature.getParentFeature() (existed but not exposed)
+- Added Feature.avatar
+- Added Feature.update()
+- Added Avatar.updateFeatures()
+- Many Feature members now automatically call update() when set (art, color, 
+  transform, their respective name members, and artStyle). Calling update
+  manually may still be needed for some operations such as modifiying nested
+  members of objects contained within Feature objects
+- Constrain behavior now distinguishes between scaleX and scaleY
+
+=== 0.0.4 (April 30, 2009) ===
+
+This release strengthens the ability for an Avatar to be fully functional and
+self-contained without the need for a library.  This includes the introduction
+of behaviors.
+
+- Removed Transform.fill() as it no longer applied
+- Added Transform.add() and respective subtract()
+- Base transforms are no longer used with concatenation but are added to the
+  actual transforms of the feature (i.e. they're truely now a starting
+  transform rather than a parent transform)
+- Added clone() methods to Constraint, Rect, and Range
+- Added a new class FeatureBase as a base class to FeatureDefinition and 
+  Feature
+- Added support for behaviors
+- Added behaviorSet to FeatureBase
+- Removed FeatureDefinition.constraint and converted it to a behavior named
+  Constrain
+- Removed MirroredFeatureDefinition and converted it to a bahavior named 
+  Mirror; Mirroring now works with the consolidate APIs
+- Reworked parent references to now also work through Features using 
+  Feature.parentName (now inherited from FeatureBase)
+- Removed TransformSet and ColorSet, changing FeatureDefinition.transformSet
+  and colorSet to be SetCollection instances.
+- Moved all classes within the data package into the parent avatarcore.
+  This also requires XML to use the namespace com.myavatareditor.avatarcore
+  (removing the data)
+- XMLDefinitionParser no longer throws an error for definitions in XML it 
+  cannot resolve into class definitions
+- XMLDefinitionWriter no longer creates XML nodes for properties with no
+  attributes or children (e.g. empty collections)
+- Added AvatarCoreVersion to indicate the current version of the framework
+- Added clone() to FeatureEvent and FeatureDefinitionEvent classes
+- Added SimpleDataEvent class
+- Added Definitions.loadXML()/setXML() to make it easier to load definitions
+  from an external XML source.
+- Renamed FeatureDefinitionEvent.definition to 
+  FeatureDefinitionEvent.featureDefinition
+- Added a name property to Collection (but not as part of ICollection)
+
+=== 0.0.3 (April 27, 2009) ===
+
+This release mostly improves on the API, simplifying it and making it
+more consistent.
+
+- Removed Library.getDefinitions as it was redundant with
+  ICollection.getItemsByType(FeatureDefinition)
+- Combined the FeatureEvent.FEATURE_TRANSFORMED and
+  FeatureEvent.FEATURE_CHANGED events into just one
+  FeatureEvent.FEATURE_CHANGED event
+- Removed the rebuildArt parameter in Avatar.refreshFeature.  It is now 
+  automatically detected whether or not art needs to be rebuilt.
+- Renamed Avatar.refreshFeature to Avatar.updateFeature
+- Added AvatarArt.updateFeature - the respective call made from the Avatar
+  event dispatched when Avatar.updateFeature is called
+- Removed redraw parameter from AvatarArt.addFeatureArt
+- Removed AvatarArt.updateArtArrangement; it is now handled in AvatarArt.draw
+- Removed creator property from Avatar. If needed, this property, and others
+  like it, should be added in custom extensions by developers
+- Created a TransformSet class, a collection for containing variations on
+  transformations
+- Added the transformSet property to the FeatureDefinition class for
+  containing a set of pre-defined transforms
+- Added Feature.transformName
+- Added clone() methods to Transform, Color, and Art.
+- Added ICollection.copyCollectionFrom() for deep cloning of ICollection
+  collections for objects that support the clone method
+- Fixed a bug in Collection where removing an item would delete the item index
+  rather than splicing it from the collection array if the name of that item
+  was numeric (which is the default assigned name - the index - if one is not
+  explicitly provided)
+- Feature.color will now be correctly applied to an Avatar if that feature has
+  no associated definition
+- Included separate scaleX and scaleY properties in Transform. The scale
+  property now reflects an average of these two values when queried, or
+  defines both when set.
+- Fixed Viewport contstructor arguments which were previously being ignored
+- Added Library.name
+- Added Avatar.libraryName
+- Added a new Definitions class which automatically links avatars to libraries
+  when Avatar.libraryName matches Library.name
+- Changed behavior of Feature.artName and Feature.colorName to now reference
+  Feature.art.name and Feature.color.name respectively if defined, or default
+  to the names used as defaults when that feature is rendered through a library
+- Added SetCollection class as a base class for ArtSet, ColorSet and 
+  TransformSet for their redundant properties
+- Added a defaultName property to set classes (in SetCollection) to specify
+  default items. This replaces FeatureDefinition.defaultColorName and
+  defaultArtName as well as what would have been defaultTransformName.
+- Removed FeatureDefinition.defaultArt, defaultColor and defaultTransform
+- Added FeatureDefinition/Feature.baseTransform
+- Added Feature.consildate() and Avatar.consolidateFeatures()
+- Changed behavior of Transform to write Transform properties as attributes
+  when written to XML by XMLDefinitionWriter rather than child elements
+
+=== 0.0.2 (April 14, 2009) === 
+
+This release improves on the API design as well as extends the XML
+capabilities of the framework.
+
+- Renamed MirrorArtSprite to MirroredArtSprite
+- Art objects now replace ArtGroup objects completely.  Art requiring multiple
+  art assets would consist of one Art instance containing multiple other Art 
+  instances.
+- Updated Art constructor to include a src parameter
+- Added a thumbnail property to the Art class. This would be used by editors 
+  to present selections to the user
+- Updated Rect with constructor parameters that mirror flash.geom.Rectangle
+- Added constructor parameters to Constraint
+- Fixed bug where new features added to avatar weren't being updated to use 
+  that avatar's library
+- Avatar.addFeature and similar APIs have been removed in favor of sticking 
+  with the inherited collection APIs of the same type.  These methods are 
+  overridden as necessary to provide feature events.
+- Feature.transform is now null by default
+- Added additional default properties into FeatureDefinition
+- FeatureDefinition.transform renamed to defaultTransform
+- Added FeatureDefinitionEvent
+- Library now dispatches FeatureDefinitionEvent events for definition 
+  addition, removal and changes
+- Changes in libraries (invoking events) are recognized by Avatars allowing 
+  them to update automatically as needed
+- Moved XMLDefinitionParse out of avatarcore.data.xml package into just 
+  avatarcore.xml
+- XMLDefinitionParser now creates instances for null objects where xml 
+  nodes attempt to define values
+- Added XMLDefinitionWriter for writing XML from objects
+- Added IXMLWritable interface for defining properties related to writing XML 
+- Removed term "Collection" from ICollection API
+- Added getItemsByType method in ICollection
+- Added Viewport class for containing avatar graphics and capturing graphics 
+  as bitmaps
+- Converted most class member variables to accessor methods
+- More documentation within source code
+
+
+=== 0.0.1 (March 27, 2009) ===
+
+- First release
+
+
+== License == 
+
+Copyright (c) 2009 Trevor McCauley
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies 
+of the Software, and to permit persons to whom the Software is furnished to do
+so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE. 

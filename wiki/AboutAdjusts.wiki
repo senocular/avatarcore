@@ -1,0 +1,59 @@
+#summary Learn more about using Adjusts in Avatar Core.
+#labels Phase-Implementation
+_(Last updated for ver 0.5.5)_
+
+Adjust objects represent visual transforms used for Feature Art, not too unlike flash.geom.Transform.matrix.  Adjusts determine the position, size and rotation Art used in Features.
+
+API: [http://www.myavatareditor.com/avatarcore/docs/index.html?com/myavatareditor/avatarcore/Adjust.html&com/myavatareditor/avatarcore/class-list.html Adjust Class]
+
+*In This Document:*
+<wiki:toc />
+
+
+== Adjusting Art ==
+
+By default, Art for Features is un-scaled, un-rotated, and is positioned at 0,0 of the AvatarDisplay object rendering it (not accounting for x, y offsets used by the Art instance).  By assigning an Adjust object to a Feature, the position, size, and rotation can be changed further.
+
+Feature position is defined by Adjust.x and Adjust.y.  Rotation is handled by Adjust.rotation.  Size is handled relatively by percent (scale) where 1 is 100% scale.  Scale can be set uniformly through Adjust.scale or separately for both the x and y axis using scaleX and scaleY.
+
+The following example moves the feature represented by image.jpg to 25,25 within an AvatarDisplay object, and scales it 200% of its normal size.
+{{{
+<Feature>
+	<Art src="image.jpg" />
+	<Adjust x="25" y="25" scale="2" />
+<Feature>
+}}}
+
+Adjusts work on any and all Art objects used for a Feature.  If a Feature's art consists of a container Art with multiple other child Art objects, each are changed based on the values specified by an Adjust.
+
+
+== Inherited Adjusts ==
+
+When a Feature specifies another Feature as its parent, it inherits Adjust characteristics from that parent.  In fact, Adjust values are the only characteristic of a parent Feature that affects the child.
+
+Unlike the display list in Flash, not all characteristics of a parent Adjust is inherited.  Position and rotation are, but scale is not.  Scale will still affect position, however.
+
+
+== Updating Adjusts ==
+
+When changing the properties of an Adjust instance, those changes will not automatically be reflected in whatever Feature references that Adjust.  The Feature would need to be redrawn.  This can be done using Feature.redraw(), or you can take the Flash transform approach.  
+
+The transform object for display objects in Flash references other objects such as instances of Matrix and ColorTransform.  Changing any of the properties on those objects are not reflected in the display object unless you reset DisplayObject.transform.matrix (or colorTransform) to the instances you edited.  The same applies to any property in Features.  If you modify Feature.adjust.x, the adjustment for that feature will not be updated until the feature is updated.  To do this, you can reassign Feature.adjust to the adjust that you edited.
+
+{{{
+var adjust:Adjust = myFeature.adjust;
+adjust.x += 10;
+myFeature.adjust = adjust; // automatically updates feature
+}}}
+
+You can also use the Feature.autoRedraw property and Feature.redraw() method for more control over when a Feature updates itself.
+
+
+== Where to go from here ==
+  * [AboutFeatures]
+  * [AboutArt]
+  * [AboutXMLParsing]
+  * [AboutLibraries]
+  * [AboutColors]
+  * [AboutAdjusts]
+  * [AboutBehaviors]

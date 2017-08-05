@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/96/trunk/as3/src/com/myavatareditor/avatarcore/display
+END
+ArtSprite.as
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/96/trunk/as3/src/com/myavatareditor/avatarcore/display/ArtSprite.as
+END
+SourceLoaderSprite.as
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/96/trunk/as3/src/com/myavatareditor/avatarcore/display/SourceLoaderSprite.as
+END
+Viewport.as
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/96/trunk/as3/src/com/myavatareditor/avatarcore/display/Viewport.as
+END
+ThumbnailArtSprite.as
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/96/trunk/as3/src/com/myavatareditor/avatarcore/display/ThumbnailArtSprite.as
+END
+MirroredArtSprite.as
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/96/trunk/as3/src/com/myavatareditor/avatarcore/display/MirroredArtSprite.as
+END
+AvatarDisplay.as
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/96/trunk/as3/src/com/myavatareditor/avatarcore/display/AvatarDisplay.as
+END

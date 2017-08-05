@@ -1,0 +1,5 @@
+#summary ActionScript is the programming language used in Adobe Flash SWF files.
+#labels Deprecated
+#sidebar TableOfContents
+
+ActionScript is the programming language used in Adobe Flash SWF files.  Avatar Core was originally designed using Flash and ActionScript 3.0.  ActionScript 3.0 requires Flash Player 9 or greater.

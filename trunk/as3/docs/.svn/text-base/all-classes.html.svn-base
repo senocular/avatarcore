@@ -1,0 +1,121 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>All Classes - Avatar Core API Documentation</title>
+      <base target="classFrame">
+      <link rel="stylesheet" href="style.css" type="text/css" media="screen">
+      <link rel="stylesheet" href="print.css" type="text/css" media="print">
+      <link rel="stylesheet" href="override.css" type="text/css">
+   </head>
+   <body class="classFrameContent">
+      <h3><a href="class-summary.html" target="classFrame" style="color:black">All Classes</a></h3>
+      <table cellpadding="0" cellspacing="0">
+         <tr>
+            <td><a href="com/myavatareditor/avatarcore/Adjust.html">Adjust</a></td>
+         </tr>
+         <tr>
+            <td><a href="com/myavatareditor/avatarcore/Art.html">Art</a></td>
+         </tr>
+         <tr>
+            <td><a href="com/myavatareditor/avatarcore/ArtSet.html">ArtSet</a></td>
+         </tr>
+         <tr>
+            <td><a href="com/myavatareditor/avatarcore/display/ArtSprite.html">ArtSprite</a></td>
+         </tr>
+         <tr>
+            <td><a href="com/myavatareditor/avatarcore/Avatar.html">Avatar</a></td>
+         </tr>
+         <tr>
+            <td><a href="com/myavatareditor/avatarcore/AvatarCoreVersion.html">AvatarCoreVersion</a></td>
+         </tr>
+         <tr>
+            <td><a href="com/myavatareditor/avatarcore/display/AvatarDisplay.html">AvatarDisplay</a></td>
+         </tr>
+         <tr>
+            <td><a href="com/myavatareditor/avatarcore/Collection.html">Collection</a></td>
+         </tr>
+         <tr>
+            <td><a href="com/myavatareditor/avatarcore/Color.html">Color</a></td>
+         </tr>
+         <tr>
+            <td><a href="com/myavatareditor/avatarcore/Constrain.html">Constrain</a></td>
+         </tr>
+         <tr>
+            <td><a href="com/myavatareditor/avatarcore/Definitions.html">Definitions</a></td>
+         </tr>
+         <tr>
+            <td><a href="com/myavatareditor/avatarcore/Feature.html">Feature</a></td>
+         </tr>
+         <tr>
+            <td><a href="com/myavatareditor/avatarcore/FeatureBase.html">FeatureBase</a></td>
+         </tr>
+         <tr>
+            <td><a href="com/myavatareditor/avatarcore/FeatureDefinition.html">FeatureDefinition</a></td>
+         </tr>
+         <tr>
+            <td><a href="com/myavatareditor/avatarcore/events/FeatureDefinitionEvent.html">FeatureDefinitionEvent</a></td>
+         </tr>
+         <tr>
+            <td><a href="com/myavatareditor/avatarcore/events/FeatureEvent.html">FeatureEvent</a></td>
+         </tr>
+         <tr>
+            <td><a href="com/myavatareditor/avatarcore/IBehavior.html"><i>IBehavior</i></a></td>
+         </tr>
+         <tr>
+            <td><a href="com/myavatareditor/avatarcore/IClonable.html"><i>IClonable</i></a></td>
+         </tr>
+         <tr>
+            <td><a href="com/myavatareditor/avatarcore/ICollection.html"><i>ICollection</i></a></td>
+         </tr>
+         <tr>
+            <td><a href="com/myavatareditor/avatarcore/xml/IXMLWritable.html"><i>IXMLWritable</i></a></td>
+         </tr>
+         <tr>
+            <td><a href="com/myavatareditor/avatarcore/Library.html">Library</a></td>
+         </tr>
+         <tr>
+            <td><a href="com/myavatareditor/avatarcore/Metadata.html">Metadata</a></td>
+         </tr>
+         <tr>
+            <td><a href="com/myavatareditor/avatarcore/Mirror.html">Mirror</a></td>
+         </tr>
+         <tr>
+            <td><a href="com/myavatareditor/avatarcore/display/MirroredArtSprite.html">MirroredArtSprite</a></td>
+         </tr>
+         <tr>
+            <td><a href="com/myavatareditor/avatarcore/debug/PrintLevel.html">PrintLevel</a></td>
+         </tr>
+         <tr>
+            <td><a href="com/myavatareditor/avatarcore/debug/PrintWindow.html">PrintWindow</a></td>
+         </tr>
+         <tr>
+            <td><a href="com/myavatareditor/avatarcore/Range.html">Range</a></td>
+         </tr>
+         <tr>
+            <td><a href="com/myavatareditor/avatarcore/SetCollection.html">SetCollection</a></td>
+         </tr>
+         <tr>
+            <td><a href="com/myavatareditor/avatarcore/events/SimpleDataEvent.html">SimpleDataEvent</a></td>
+         </tr>
+         <tr>
+            <td><a href="com/myavatareditor/avatarcore/events/SourceEvent.html">SourceEvent</a></td>
+         </tr>
+         <tr>
+            <td><a href="com/myavatareditor/avatarcore/display/SourceLoaderSprite.html">SourceLoaderSprite</a></td>
+         </tr>
+         <tr>
+            <td><a href="com/myavatareditor/avatarcore/display/ThumbnailArtSprite.html">ThumbnailArtSprite</a></td>
+         </tr>
+         <tr>
+            <td><a href="com/myavatareditor/avatarcore/display/Viewport.html">Viewport</a></td>
+         </tr>
+         <tr>
+            <td><a href="com/myavatareditor/avatarcore/xml/XMLDefinitionParser.html">XMLDefinitionParser</a></td>
+         </tr>
+         <tr>
+            <td><a href="com/myavatareditor/avatarcore/xml/XMLDefinitionWriter.html">XMLDefinitionWriter</a></td>
+         </tr>
+      </table>
+   </body>
+</html>
+<!--<br/>Sun Feb 7 2010, 10:25 PM -08:00  -->

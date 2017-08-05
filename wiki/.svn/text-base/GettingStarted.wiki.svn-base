@@ -1,0 +1,236 @@
+#summary Start working with the Avatar Core framework.
+#labels Featured
+_(Last updated for ver 0.5.5)_
+
+First things first, download the Avatar Core if you haven't already. Instructions for doing that and setting up your authoring tool/IDE can be found on the [Installation] page. It may also be helpful to keep handy the [http://www.myavatareditor.com/avatarcore/docs/ API Documentation] as a reference for the samples covered here.  And if you're completely new to Avatar Core, be sure that you've read the [Introduction] as it will give you a nice overview of the framework as a whole.
+
+<wiki:toc />
+
+== Avatar Core Hello World ==
+
+The Avatar Core framework doesn't support text directly, so a _Hello World!_ example (one which serves as a simple introduction to a new programming language or API) will have to be faked with an image.  The image being used will be the following:
+
+<img src="http://www.myavatareditor.com/avatarcore/images/tutorial/hello_world.png" alt="Hello World Example Image" />
+
+In this example we'll use what will essentially be the bare minimum necessary for the framework to display this image on the screen. This requires 4 classes from the framework: 
+  * Avatar (com.myavatareditor.avatarcore.Avatar)
+  * Feature (com.myavatareditor.avatarcore.Feature)
+  * Art (com.myavatareditor.avatarcore.Art)
+  * AvatarDisplay (com.myavatareditor.avatarcore.display.AvatarDisplay)
+
+The Avatar will contain a Feature which in turn references an Art.  Then, that Avatar is given to the AvatarDisplay display object so it can be drawn on the screen. 
+
+<img src="http://www.myavatareditor.com/avatarcore/images/uml_avatar_avatarart.jpg" alt="Avatar Class Diagram" />
+
+Avatars can contain any number of Feature objects. Features in turn reference only one primary Art object.  Art specifies what is to be displayed visually for that Feature.  When an AvatarDisplay is given an Avatar object to be drawn, it automatically reads through its Feature objects and finds all the Art objects that it needs to displayed on the screen.  AvatarDisplay will then internally create ArtSprites to represent those objects, but that's all taken care of behind the scenes and nothing that we have to worry about.
+
+=== Sample Code ===
+
+{{{
+import com.myavatareditor.avatarcore.*;
+import com.myavatareditor.avatarcore.display.*;
+
+var avatar:Avatar = new Avatar();
+var feature:Feature = new Feature();
+var art:Art = new Art();
+art.src = "http://www.myavatareditor.com/avatarcore/images/tutorial/hello_world.png";
+
+feature.art = art;
+avatar.addItem(feature);
+
+var avatarDisplay:AvatarDisplay = new AvatarDisplay(avatar);
+addChild(avatarDisplay);
+}}}
+
+When published, you end up with:
+
+<img src="http://www.myavatareditor.com/avatarcore/images/tutorial/hello_world_swf.png" alt="Image of Hello World SWF" />
+
+Note: For the image to display, you will need to be connected to the internet unless you change the URL used by the Art object.
+
+==== Walkthrough ====
+
+The first thing that is necessary is the is importing the classes being used.  Most of the core Avatar Core classes are defined directly in the com.myavatareditor.avatarcore package.  AvatarDisplay, being a DisplayObject (the view), is the exception, being contained within the com.myavatareditor.avatarcore.display package.
+{{{
+import com.myavatareditor.avatarcore.*;
+import com.myavatareditor.avatarcore.display.*;
+}}}
+
+Next, the objects that make up the avatar model are created, starting with the Avatar itself.  This needs at least one Feature and an Art instance to be referenced by that feature.  Here, the Art instance references the hello_world.png image through its src property.
+{{{
+var avatar:Avatar = new Avatar();
+var feature:Feature = new Feature();
+var art:Art = new Art();
+art.src = "http://www.myavatareditor.com/avatarcore/images/tutorial/hello_world.png";
+}}}
+
+Once the avatar objects have been created, they can be assembled.  Since Avatar objects can contain many Feature instances, they uses a function not unlike DisplayObjectContainer.addChild, addItem, to obtain Feature references.  Feature, on the other hand, can only contain one Art object, so it simply uses a property called art.  The addItem function is used quite a bit in Avatar Core as it is part of Avatar Core's Collection API used by many objects in the framework.
+{{{
+feature.art = art;
+avatar.addItem(feature);
+}}}
+
+Finally an AvatarDisplay object is created to display the Avatar visually.  This is added to the display list and allows us to see the avatar and all of its feature art.
+{{{
+var avatarDisplay:AvatarDisplay = new AvatarDisplay(avatar);
+addChild(avatarDisplay);
+}}}
+
+
+== Hello World with XML ==
+
+One of the more important features of Avatar Core is the ability to describe avatars in XML.  This should be the more commonly used workflow when working with avatars in Avatar Core - defining avatars in XML and using a generic client application to load that XML and display the avatar character it describes.  This example takes the previous Hello World example and switches it over to use XML.  For the sake of simplicity, the XML will be included inline with the rest of the source code, but it would be more likely that this would be loaded in from an external source in practice.
+
+=== Sample Code ===
+{{{
+import com.myavatareditor.avatarcore.*;
+import com.myavatareditor.avatarcore.display.*;
+import com.myavatareditor.avatarcore.xml.*;
+
+var avatarXML:XML = 
+}}}
+{{{
+	<Avatar xmlns="com.myavatareditor.avatarcore">
+		<Feature>
+			<art src="http://www.myavatareditor.com/avatarcore/images/tutorial/hello_world.png" />
+		</Feature>
+	</Avatar>;
+}}}
+{{{
+var xmlParser:XMLDefinitionParser = new XMLDefinitionParser();
+var avatar:Avatar = xmlParser.parse(avatarXML) as Avatar;
+
+var avatarDisplay:AvatarDisplay = new AvatarDisplay(avatar);
+addChild(avatarDisplay);
+}}}
+
+When published, the results are the same as before:
+
+<img src="http://www.myavatareditor.com/avatarcore/images/tutorial/hello_world_swf.png" alt="Image of Hello World SWF" />
+
+==== Walkthrough ====
+
+As before, the necessary imports are included. This time an extra import for com.myavatareditor.avatarcore.xml is added for the XML parser.
+{{{
+import com.myavatareditor.avatarcore.*;
+import com.myavatareditor.avatarcore.display.*;
+import com.myavatareditor.avatarcore.xml.*;
+}}}
+
+Next is the XML, here assigned to the avatarXML variable.  It mirrors the Avatar definition created within the source code before.  It consists of an Avatar node (the Avatar instance), a nested Feature node (Feature child item added to Avatar), and an art node which represents the Art instance assigned to the art property of the parent Feature.  The Art instance's src attribute is defined as the value used for the src property for the Art instance in the previous example.
+
+Note that the xml namespace specified within the XML is the same is the package path used by Avatar, Feature, and Art (com.myavatareditor.avatarcore).  This namespace is required since it's actually used to locate those definitions when the XML is being parsed.
+{{{
+var avatarXML:XML = 
+}}}
+{{{
+	<Avatar xmlns="com.myavatareditor.avatarcore">
+		<Feature>
+			<art src="http://www.myavatareditor.com/avatarcore/images/tutorial/hello_world.png" />
+		</Feature>
+	</Avatar>;
+}}}
+
+With the XML defined, it can be converted to a tangible Avatar instance. This is done using the XMLDefinitionParser class.  Using it's parse method with the XML, the Avatar defined by that XML is created and saved to the avatar variable.
+
+The XMLDefinitionParser class contains all the logic necessary for converting the XML into runtime objects.  This includes automatically instantiating XML nodes as object instances, adding them to collections (e.g. adding a Feature in an Avatar via the addItem ICollection method) or assigning them as object properties (e.g. art in Feature). Because XMLDefinitionParser can make any kind of object, it returns a value of a non-specific type. Notice how the as operator was used to cast this value returned by parse() to the Avatar type when assigned to the avatar variable (typed as Avatar).
+{{{
+var xmlParser:XMLDefinitionParser = new XMLDefinitionParser();
+var avatar:Avatar = xmlParser.parse(avatarXML) as Avatar;
+}}}
+
+Finally, as was the case before, an AvatarDisplay instance is created for the Avatar and added to the display list for viewing.
+{{{
+var avatarDisplay:AvatarDisplay = new AvatarDisplay(avatar);
+addChild(avatarDisplay);
+}}}
+
+If you decide to use a Definitions instance, you can bypass the use of XMLDefinitionParser altogether since Definitions objects can automatically load and parse XML into its respective Avatar Core objects.  
+
+
+== XML with Definitions ==
+
+The Definitions class is a utility class created specifically to load Avatar Core XML and parse it into its respective objects. When Loading a Definitions XML with both a Library and an Avatar, it can also automatically set up an association between the two. This is the easiest way to work with Avatars and Libraries in Avatar Core.
+
+=== Sample Code ===
+
+Avatar Core XML (MyAvatarDefinitions.xml):
+{{{
+<?xml version="1.0" ?>
+<Definitions xmlns="com.myavatareditor.avatarcore">
+	
+	<Library name="MyLibrary">
+
+		<FeatureDefinition name="Eyes">
+			<artSet>
+				<Art name="Round" src="EyesRound.png" />
+				<Art name="Square" src="EyesSquare.png" />
+				<Art name="Closed" src="EyesClosed.png" />
+			</artSet>
+		</FeatureDefinition>
+		
+		<FeatureDefinition name="Mouth">
+			<artSet>
+				<Art name="Smile" src="MouthSmile.png" />
+				<Art name="Frown" src="MouthFrown.png" />
+			</artSet>
+		</FeatureDefinition>
+		
+	</Library>
+
+	<Avatar name="MyAvatar" libraryName="MyLibrary">
+
+		<Feature name="Eyes" artName="Square" />
+		<Feature name="Mouth" artName="Smile" />
+		
+	</Avatar>
+	
+</Definitions>
+}}}
+
+Source code:
+{{{
+import com.myavatareditor.avatarcore.*;
+import com.myavatareditor.avatarcore.display.*;
+
+var definitions:Definitions = new Definitons();
+definitions.addEventListener(Event.COMPLETE, definitionsLoaded);
+definitions.load( new URLRequest("MyAvatarDefinitions.xml") );
+
+function definitionsLoaded(event:Event):void {
+        var avatar:Avatar = definitions.getItemByName("MyAvatar") as Avatar;
+        addchild( new AvatarDisplay(avatar) );
+}
+}}}
+
+=== Walkthrough ===
+
+First, the XML file is set up (MyAvatarDefinitions.xml). It contains a Library and Avatar definition.  Note the use of the names.  Names make relationships with objects in Avatar and Library objects.
+
+In the source code the necessary imports are included, and then a Definitions object is created.  Once created, a COMPLETE event listener is added to it, and much like a flash.net.URLLoader, load() is called to load a remote file, our XML file.
+{{{
+var definitions:Definitions = new Definitons();
+definitions.addEventListener(Event.COMPLETE, definitionsLoaded);
+definitions.load( new URLRequest("MyAvatarDefinitions.xml") );
+}}}
+
+When the Definitions object finishes loading the XML, it will automatically add the contents of the XML, parsed, into itself using the ICollection method addItem. 
+
+In the COMPLETE handler, definitionsLoaded, the Avatar instance within the Definitions object is retrieved using the ICollection method getItemByName, and then given to an AvatarDisplay object to be made visible on the screen.
+{{{
+function definitionsLoaded(event:Event):void {
+        var avatar:Avatar = definitions.getItemByName("MyAvatar") as Avatar;
+        addchild( new AvatarDisplay(avatar) );
+}
+}}}
+
+It's as easy as that.  But there's much more you can do. Check out the other sections of the wiki for more information on the different areas of the Avatar Core framework.
+
+== Where to go from here ==
+  * [AboutFeatures]
+  * [AboutArt]
+  * [AboutXMLParsing]
+  * [AboutLibraries]
+  * [AboutColors]
+  * [AboutAdjusts]
+  * [AboutBehaviors]

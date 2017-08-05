@@ -1,0 +1,125 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/96/trunk/as3/src/com/myavatareditor/avatarcore
+END
+Definitions.as
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/96/trunk/as3/src/com/myavatareditor/avatarcore/Definitions.as
+END
+Color.as
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/96/trunk/as3/src/com/myavatareditor/avatarcore/Color.as
+END
+Avatar.as
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/96/trunk/as3/src/com/myavatareditor/avatarcore/Avatar.as
+END
+Metadata.as
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/96/trunk/as3/src/com/myavatareditor/avatarcore/Metadata.as
+END
+FeatureBase.as
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/96/trunk/as3/src/com/myavatareditor/avatarcore/FeatureBase.as
+END
+Art.as
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/96/trunk/as3/src/com/myavatareditor/avatarcore/Art.as
+END
+IClonable.as
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/96/trunk/as3/src/com/myavatareditor/avatarcore/IClonable.as
+END
+Adjust.as
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/96/trunk/as3/src/com/myavatareditor/avatarcore/Adjust.as
+END
+Collection.as
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/96/trunk/as3/src/com/myavatareditor/avatarcore/Collection.as
+END
+Feature.as
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/96/trunk/as3/src/com/myavatareditor/avatarcore/Feature.as
+END
+Range.as
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/96/trunk/as3/src/com/myavatareditor/avatarcore/Range.as
+END
+AvatarCoreVersion.as
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/96/trunk/as3/src/com/myavatareditor/avatarcore/AvatarCoreVersion.as
+END
+Constrain.as
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/96/trunk/as3/src/com/myavatareditor/avatarcore/Constrain.as
+END
+ArtSet.as
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/96/trunk/as3/src/com/myavatareditor/avatarcore/ArtSet.as
+END
+FeatureDefinition.as
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/96/trunk/as3/src/com/myavatareditor/avatarcore/FeatureDefinition.as
+END
+Library.as
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/96/trunk/as3/src/com/myavatareditor/avatarcore/Library.as
+END
+ICollection.as
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/96/trunk/as3/src/com/myavatareditor/avatarcore/ICollection.as
+END
+SetCollection.as
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/96/trunk/as3/src/com/myavatareditor/avatarcore/SetCollection.as
+END
+IBehavior.as
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/96/trunk/as3/src/com/myavatareditor/avatarcore/IBehavior.as
+END
+Mirror.as
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/96/trunk/as3/src/com/myavatareditor/avatarcore/Mirror.as
+END

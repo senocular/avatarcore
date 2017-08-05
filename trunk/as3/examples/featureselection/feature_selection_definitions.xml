@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Definitions xmlns="com.myavatareditor.avatarcore">
+	
+	<Library name="default">
+		
+		<FeatureDefinition name="Head">
+			<baseAdjust x="150" y="150"/>
+			<artSet zIndex="100">
+				<Art name="Normal" src="HeadStandard" />
+			</artSet>
+		</FeatureDefinition>
+		
+		<FeatureDefinition name="Hair" parentName="Head">
+			<artSet zIndex="200">
+				<Art name="Afro" src="HairAfro" />
+				<Art name="Braids">
+					<Art src="HairBraidsBack" zIndex="90" />
+					<Art src="HairBraidsFront" />
+				</Art>
+				<Art name="Spikey" src="HairSpike" />
+				<Art name="Bald" />
+			</artSet>
+			
+			<colorSet defaultName="Blonde">
+				<Color name="Gray" redOffset="100" greenOffset="100" blueOffset="100" />
+				<Color name="Brown" blueMultiplier="0" greenMultiplier=".5" redOffset="30" greenOffset="15" />
+				<Color name="Blonde" blueMultiplier=".25" greenMultiplier=".5" redOffset="150" greenOffset="125" />
+			</colorSet>
+			
+			<adjustSet defaultName="Normal">
+				<Adjust name="Normal" flipX="false" />
+				<Adjust name="Reversed" flipX="true" />
+			</adjustSet>
+		</FeatureDefinition>
+		
+		<FeatureDefinition name="Eyes" parentName="Head">
+			<baseAdjust x="40" y="-15" scale=".75" />
+			
+			<artSet zIndex="130" colorize="0">
+				<Art name="Normal">
+					<Art src="EyeStandard" />
+					<Art zIndex="129" src="EyeIris" colorize="1" />
+				</Art>
+				<Art name="With Eye Shadow">
+					<Art src="EyeShadow" />
+					<Art zIndex="129" src="EyeIris" colorize="1" />
+				</Art>
+				<Art name="Tired">
+					<Art src="EyeTired" />
+					<Art zIndex="129" src="EyeIris" colorize="1" />
+				</Art>
+				<Art name="Closed" src="EyeShut" />
+			</artSet>
+			
+			<colorSet defaultName="Blue">
+				<Color name="Blue" color="#3366CC"/>
+				<Color name="Brown" color="#996600" />
+				<Color name="Green" color="#339900" />
+			</colorSet>
+			
+			<behaviors>
+				<Mirror />
+			</behaviors>
+		</FeatureDefinition>
+		
+		<FeatureDefinition name="Nose" parentName="Head">
+			<baseAdjust y="15" scale=".8" />
+			
+			<artSet zIndex="140">
+				<Art name="Round" src="NoseStandard" />
+				<Art name="Piggy" src="NoseUp" />
+				<Art name="Rigid" src="NoseRigid" />
+			</artSet>
+		</FeatureDefinition>
+		
+		<FeatureDefinition name="Mouth" parentName="Head">
+			<baseAdjust y="60" scale=".60" />
+			
+			<artSet zIndex="120">
+				<Art name="Straight" src="MouthFlat" />
+				<Art name="Grin" src="MouthGrin" />
+				<Art name="Smile" src="MouthSmile" />
+				<Art name="Kissy" src="MouthKissy" />
+			</artSet>
+		</FeatureDefinition>
+		
+	</Library>
+	
+	<Avatar name="myAvatar" libraryName="default">
+		<Feature name="Head" artName="Normal" />
+		<Feature name="Hair" artName="Braids" />
+		<Feature name="Eyes" artName="With Eye Shadow"  colorName="Green" />\
+		<Feature name="Nose" artName="Round" />
+		<Feature name="Mouth" artName="Kissy" />
+	</Avatar>
+	
+</Definitions>
